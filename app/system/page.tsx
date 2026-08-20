@@ -18,6 +18,94 @@ export default function SystemPage() {
   const [results, setResults] = useState<GeneratedAssets | null>(null);
   const [error, setError] = useState('');
   const [generatingStep, setGeneratingStep] = useState(0);
+  const [expandedAsset, setExpandedAsset] = useState<string | null>(null);
+
+  const parseMarkdown = (text: string) => {
+    return text.split('\n').map((line, idx) => {
+      // Handle headings
+      if (line.startsWith('#### ')) {
+        return <h4 key={idx} style={{ fontSize: '16px', fontWeight: '800', margin: '16px 0 8px', letterSpacing: '-0.015em' }}>{line.replace('#### ', '')}</h4>;
+      }
+      if (line.startsWith('### ')) {
+        return <h3 key={idx} style={{ fontSize: '18px', fontWeight: '800', margin: '16px 0 10px', letterSpacing: '-0.015em' }}>{line.replace('### ', '')}</h3>;
+      }
+      if (line.startsWith('## ')) {
+        return <h2 key={idx} style={{ fontSize: '22px', fontWeight: '800', margin: '20px 0 12px', letterSpacing: '-0.015em' }}>{line.replace('## ', '')}</h2>;
+      }
+      if (line.startsWith('# ')) {
+        return <h1 key={idx} style={{ fontSize: '28px', fontWeight: '800', margin: '24px 0 16px', letterSpacing: '-0.015em' }}>{line.replace('# ', '')}</h1>;
+      }
+
+      // Handle bullet points
+      if (line.startsWith('- ')) {
+        const bulletContent = line.replace('- ', '');
+        let parts: (string | React.ReactNode)[] = [];
+        let lastIndex = 0;
+        
+        const boldRegex = /\*\*([^*]+)\*\*/g;
+        let match;
+        const matches: Array<{start: number, end: number, text: string}> = [];
+        
+        while ((match = boldRegex.exec(bulletContent)) !== null) {
+          matches.push({start: match.index, end: match.index + match[0].length, text: match[1]});
+        }
+        
+        matches.sort((a, b) => a.start - b.start);
+        
+        matches.forEach((m, i) => {
+          if (m.start > lastIndex) {
+            parts.push(bulletContent.substring(lastIndex, m.start));
+          }
+          parts.push(<strong key={`bold-${i}`} style={{ fontWeight: '600' }}>{m.text}</strong>);
+          lastIndex = m.end;
+        });
+        
+        if (lastIndex < bulletContent.length) {
+          parts.push(bulletContent.substring(lastIndex));
+        }
+        
+        return <li key={idx} style={{ margin: '6px 0 6px 20px', lineHeight: '1.65', color: '#444141' }}>{parts}</li>;
+      }
+      
+      // Handle regular paragraphs with bold
+      if (line.trim()) {
+        let content = line;
+        const parts: (string | React.ReactNode)[] = [];
+        let lastIndex = 0;
+        
+        const boldRegex = /\*\*([^*]+)\*\*/g;
+        let match;
+        const matches: Array<{start: number, end: number, text: string}> = [];
+        
+        while ((match = boldRegex.exec(content)) !== null) {
+          matches.push({start: match.index, end: match.index + match[0].length, text: match[1]});
+        }
+        
+        if (matches.length === 0) {
+          return <p key={idx} style={{ margin: '8px 0', lineHeight: '1.65', color: '#444141' }}>{line}</p>;
+        }
+        
+        matches.sort((a, b) => a.start - b.start);
+        
+        matches.forEach((m, i) => {
+          if (m.start > lastIndex) {
+            parts.push(content.substring(lastIndex, m.start));
+          }
+          parts.push(<strong key={`bold-${i}`} style={{ fontWeight: '600' }}>{m.text}</strong>);
+          lastIndex = m.end;
+        });
+        
+        if (lastIndex < content.length) {
+          parts.push(content.substring(lastIndex));
+        }
+        
+        return <p key={idx} style={{ margin: '8px 0', lineHeight: '1.65', color: '#444141' }}>{parts}</p>;
+      }
+      
+      // Empty lines
+      return <div key={idx} style={{ height: '12px' }}></div>;
+    });
+  };
 
   const handleGenerate = () => {
     if (!product.trim() || !strategy.trim() || !plan.trim()) {
@@ -183,9 +271,12 @@ export default function SystemPage() {
         <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
           <div className="label">GENERATING</div>
           <div>
-            <h1 style={{ marginBottom: '40px' }}>Creating your assets</h1>
+            <h1 style={{ marginBottom: '12px' }}>Creating your assets</h1>
+            <p style={{ fontSize: '15px', color: '#7d7979', marginBottom: '40px' }}>
+              This typically takes 30-60 seconds. Please wait while we generate your messaging framework, sales battlecard, and product webpage.
+            </p>
 
-            <div style={{ space: '24px' }}>
+            <div>
               {[
                 { label: 'Messaging framework', desc: 'Positioning, messaging pillars, audience messaging' },
                 { label: 'Sales battlecard', desc: 'Discovery questions, objection handling, talk tracks' },
@@ -203,15 +294,23 @@ export default function SystemPage() {
                     alignItems: 'start'
                   }}
                 >
-                  <div style={{ fontSize: '20px', flex: '0 0 auto' }}>
+                  <div style={{ fontSize: '20px', flex: '0 0 auto', width: '20px', textAlign: 'center' }}>
                     {generatingStep > i ? '✓' : generatingStep === i ? '⟳' : '○'}
                   </div>
-                  <div>
+                  <div style={{ flex: 1 }}>
                     <div style={{ fontSize: '14px', fontWeight: '600', color: '#201e1d' }}>{item.label}</div>
                     <div style={{ fontSize: '13px', color: '#7d7979' }}>{item.desc}</div>
+                    {generatingStep === i && <div style={{ fontSize: '12px', color: '#2563eb', marginTop: '4px' }}>In progress...</div>}
+                    {generatingStep > i && <div style={{ fontSize: '12px', color: '#2563eb' }}>Complete</div>}
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div style={{ marginTop: '40px', padding: '16px', background: '#f8f4f4', border: '1px solid rgba(32, 30, 29, 0.2)' }}>
+              <p style={{ margin: '0', fontSize: '13px', color: '#7d7979', fontStyle: 'italic' }}>
+                💡 While you wait, review your launch brief. Make sure your product description, strategy, and plan are clear.
+              </p>
             </div>
           </div>
         </div>
@@ -219,7 +318,52 @@ export default function SystemPage() {
     );
   }
 
-  // Results step
+  // Results step - expanded view
+  if (step === 'results' && results && expandedAsset) {
+    return (
+      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
+        <button
+          onClick={() => setExpandedAsset(null)}
+          style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: '15px', fontWeight: '600', cursor: 'pointer', marginBottom: '40px' }}
+        >
+          ← Back to results
+        </button>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+          <div className="label">
+            {expandedAsset === 'messaging' && 'MESSAGING FRAMEWORK'}
+            {expandedAsset === 'battlecard' && 'SALES BATTLECARD'}
+            {expandedAsset === 'webpage' && 'PRODUCT WEBPAGE'}
+          </div>
+          <div>
+            <h2 style={{ marginBottom: '28px' }}>
+              {expandedAsset === 'messaging' && 'Your positioning & messaging'}
+              {expandedAsset === 'battlecard' && 'Discovery & objection guide'}
+              {expandedAsset === 'webpage' && 'Customer-facing copy'}
+            </h2>
+            <div style={{ background: '#eae9e9', border: '1px solid rgba(32, 30, 29, 0.4)', padding: '24px', fontSize: '14px', maxHeight: '70vh', overflow: 'auto' }}>
+              {expandedAsset === 'messaging' && parseMarkdown(results.messaging_framework)}
+              {expandedAsset === 'battlecard' && parseMarkdown(results.sales_battlecard)}
+              {expandedAsset === 'webpage' && parseMarkdown(results.product_webpage)}
+            </div>
+            <button
+              onClick={() => copyToClipboard(
+                expandedAsset === 'messaging' ? results.messaging_framework :
+                expandedAsset === 'battlecard' ? results.sales_battlecard :
+                results.product_webpage
+              )}
+              className="btn btn-primary"
+              style={{ marginTop: '24px', width: '100%', justifyContent: 'center' }}
+            >
+              Copy all
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Results step - grid view
   if (step === 'results' && results) {
     return (
       <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
@@ -245,11 +389,11 @@ export default function SystemPage() {
           <div></div>
           <div style={{ maxWidth: '800px' }}>
             {[
-              { label: 'MESSAGING FRAMEWORK', title: 'Your positioning & messaging', content: results.messaging_framework },
-              { label: 'SALES BATTLECARD', title: 'Discovery & objection guide', content: results.sales_battlecard },
-              { label: 'PRODUCT WEBPAGE', title: 'Customer-facing copy', content: results.product_webpage }
-            ].map((item, i) => (
-              <div key={i} style={{ marginBottom: '40px' }}>
+              { id: 'messaging', label: 'MESSAGING FRAMEWORK', title: 'Your positioning & messaging', content: results.messaging_framework },
+              { id: 'battlecard', label: 'SALES BATTLECARD', title: 'Discovery & objection guide', content: results.sales_battlecard },
+              { id: 'webpage', label: 'PRODUCT WEBPAGE', title: 'Customer-facing copy', content: results.product_webpage }
+            ].map((item) => (
+              <div key={item.id} style={{ marginBottom: '40px' }}>
                 <div style={{ fontSize: '12px', fontWeight: '600', color: '#2563eb', letterSpacing: '0.1em', marginBottom: '8px' }}>
                   {item.label}
                 </div>
@@ -261,7 +405,7 @@ export default function SystemPage() {
                   <button onClick={() => copyToClipboard(item.content)} className="btn btn-secondary" style={{ flex: 1, justifyContent: 'center' }}>
                     Copy
                   </button>
-                  <button className="btn btn-secondary" style={{ flex: 1, justifyContent: 'center' }}>
+                  <button onClick={() => setExpandedAsset(item.id)} className="btn btn-secondary" style={{ flex: 1, justifyContent: 'center' }}>
                     View full
                   </button>
                 </div>
