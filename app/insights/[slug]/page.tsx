@@ -1,8 +1,19 @@
 import Link from 'next/link';
-import { getBlogPostBySlug } from '@/app/data/blogPosts';
+import { getBlogPostBySlug, blogPosts } from '@/app/data/blogPosts';
+
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  console.log('Available slugs:', blogPosts.map(p => p.slug));
+  console.log('Looking for slug:', params.slug);
+  
   const post = getBlogPostBySlug(params.slug);
+  
+  console.log('Found post:', post);
 
   if (!post) {
     return (
