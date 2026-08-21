@@ -7,11 +7,13 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  console.log('Available slugs:', blogPosts.map(p => p.slug));
-  console.log('Looking for slug:', params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   
-  const post = getBlogPostBySlug(params.slug);
+  console.log('Available slugs:', blogPosts.map(p => p.slug));
+  console.log('Looking for slug:', slug);
+  
+  const post = getBlogPostBySlug(slug);
   
   console.log('Found post:', post);
 
