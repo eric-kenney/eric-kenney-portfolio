@@ -39,13 +39,54 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       if (line.startsWith('### ')) {
         return <h3 key={idx} style={{ fontSize: '18px', fontWeight: '800', margin: '16px 0 10px', letterSpacing: '-0.015em' }}>{line.replace('### ', '')}</h3>;
       }
+
+      // Handle bullet points with bold text
       if (line.startsWith('- ')) {
         const bulletContent = line.replace('- ', '');
-        return <li key={idx} style={{ margin: '6px 0 6px 20px', lineHeight: '1.65', color: '#444141' }}>{bulletContent}</li>;
+        const parts: (string | React.ReactNode)[] = [];
+        let lastIdx = 0;
+        
+        const boldRegex = /\*\*([^*]+)\*\*/g;
+        let match;
+        
+        while ((match = boldRegex.exec(bulletContent)) !== null) {
+          if (match.index > lastIdx) {
+            parts.push(bulletContent.substring(lastIdx, match.index));
+          }
+          parts.push(<strong key={match.index} style={{ fontWeight: '600' }}>{match[1]}</strong>);
+          lastIdx = match.index + match[0].length;
+        }
+        
+        if (lastIdx < bulletContent.length) {
+          parts.push(bulletContent.substring(lastIdx));
+        }
+        
+        return <li key={idx} style={{ margin: '6px 0 6px 20px', lineHeight: '1.65', color: '#444141' }}>{parts.length > 0 ? parts : bulletContent}</li>;
       }
+
+      // Handle regular paragraphs with bold text
       if (line.trim()) {
-        return <p key={idx} style={{ margin: '8px 0', lineHeight: '1.65', color: '#444141' }}>{line}</p>;
+        const parts: (string | React.ReactNode)[] = [];
+        let lastIdx = 0;
+        
+        const boldRegex = /\*\*([^*]+)\*\*/g;
+        let match;
+        
+        while ((match = boldRegex.exec(line)) !== null) {
+          if (match.index > lastIdx) {
+            parts.push(line.substring(lastIdx, match.index));
+          }
+          parts.push(<strong key={match.index} style={{ fontWeight: '600' }}>{match[1]}</strong>);
+          lastIdx = match.index + match[0].length;
+        }
+        
+        if (lastIdx < line.length) {
+          parts.push(line.substring(lastIdx));
+        }
+        
+        return <p key={idx} style={{ margin: '8px 0', lineHeight: '1.65', color: '#444141' }}>{parts.length > 0 ? parts : line}</p>;
       }
+
       return <div key={idx} style={{ height: '12px' }}></div>;
     });
   };
