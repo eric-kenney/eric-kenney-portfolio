@@ -70,16 +70,27 @@ export default function InsightsPage() {
         </div>
       </section>
 
-
-      {/* CTA */}
-      <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)', background: '#f8f4f4', maxWidth: '1240px', margin: '0 auto', padding: '64px 40px', textAlign: 'center' }}>
-        <h2 style={{ marginBottom: '12px' }}>Get updates</h2>
-        <p style={{ color: '#7d7979', marginBottom: '28px', fontSize: '15px' }}>
-          New insights on product marketing and AI systems.
-        </p>
-        <Link href="mailto:eric.kenney77@gmail.com" className="btn btn-primary">
-          Subscribe
-        </Link>
+      {/* Grid */}
+      <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)', maxWidth: '1240px', margin: '0 auto', padding: '64px 40px', display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+        <div></div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '28px' }}>
+          {regularPosts.map(post => (
+            <Link key={post.id} href={`/insights/${post.slug}`} style={{ textDecoration: 'none' }}>
+              <div style={{ border: '2px solid #201e1d', padding: '24px', cursor: 'pointer', transition: 'all 0.2s', height: '100%' }}>
+                <div style={{ fontSize: '12px', fontWeight: '600', color: '#7d7979', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
+                  {post.category}
+                </div>
+                <h3 style={{ marginBottom: '12px', lineHeight: '1.2', color: '#201e1d' }}>{post.title}</h3>
+                <p style={{ margin: '0 0 16px', fontSize: '14px', lineHeight: '1.55', color: '#605d5d' }}>
+                  {post.excerpt}
+                </p>
+                <div style={{ fontSize: '12px', color: '#9b9797' }}>
+                  {post.date} · {post.readTime}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );
