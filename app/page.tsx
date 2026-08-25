@@ -15,29 +15,47 @@ export default function Home() {
           I build the systems that market the product.
         </h1>
         <p style={{ fontSize: '21px', lineHeight: '1.5', color: '#605d5d', maxWidth: '60ch', margin: '36px 0 0', textWrap: 'pretty' }}>
-          Ten years of product marketing. The last year building an AI system that does the production work — positioning, battlecards, launch pages — in minutes instead of weeks. It's live on this site. Use it.
+          Fifteen years building and leading product marketing for B2B technology. I've launched products used by thousands of customers, repositioned products to unlock growth, and built teams and GTM systems that make sellers more effective. Now I'm exploring what product marketing looks like when AI handles the production work and marketers spend more time on judgment.
         </p>
         <div style={{ display: 'flex', gap: '16px', marginTop: '44px', flexWrap: 'wrap' }}>
-          <Link href="/system" className="btn btn-primary">
-            Try it now →
+          <Link href="/work" className="btn btn-primary">
+            See my work→
           </Link>
-          <Link href="/work" className="btn btn-secondary">
-            See the work
+          <Link href="/system" className="btn btn-secondary">
+            Try the AI launch system
           </Link>
         </div>
       </section>
 
-      {/* Why this exists */}
+      {/* My work by the numbers */}
       <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '64px 40px', display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
-          <div className="label">WHY THIS EXISTS</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '40px', maxWidth: '920px' }}>
-            <p style={{ margin: '0', fontSize: '17px', lineHeight: '1.65', color: '#444141', textWrap: 'pretty' }}>
-              Most product marketing time goes into production, not thinking. Drafting the messaging doc, rewriting it for sales, rewriting it again for the website. The strategy takes an afternoon. The assets take a month.
-            </p>
-            <p style={{ margin: '0', fontSize: '17px', lineHeight: '1.65', color: '#444141', textWrap: 'pretty' }}>
-              So I built the production layer. You give it the product, the buyer, and the plan. It returns a messaging framework, a battlecard, and a launch page that agree with each other, because they came from one input. What's left is the part that needs a marketer: deciding what's true and what matters.
-            </p>
+          <div className="label">MY WORK BY THE NUMBERS</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px' }}>
+            <div>
+              <div style={{ fontSize: '32px', fontWeight: '800', color: '#201e1d', marginBottom: '8px' }}>10,000+</div>
+              <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.6', color: '#444141' }}>
+                Customers acquired after repositioning a new product launch
+              </p>
+            </div>
+            <div>
+              <div style={{ fontSize: '32px', fontWeight: '800', color: '#201e1d', marginBottom: '8px' }}>28%</div>
+              <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.6', color: '#444141' }}>
+                Revenue growth from a redesigned sales strategy
+              </p>
+            </div>
+            <div>
+              <div style={{ fontSize: '32px', fontWeight: '800', color: '#201e1d', marginBottom: '8px' }}>12,000+</div>
+              <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.6', color: '#444141' }}>
+                Enterprise seats sold in a new product's first year
+              </p>
+            </div>
+            <div>
+              <div style={{ fontSize: '32px', fontWeight: '800', color: '#201e1d', marginBottom: '8px' }}>1</div>
+              <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.6', color: '#444141' }}>
+                AI-native product marketing system built
+              </p>
+            </div>
           </div>
         </div>
       </section>
