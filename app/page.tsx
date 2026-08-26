@@ -15,7 +15,7 @@ export default function Home() {
           I build the systems that market the product.
         </h1>
         <p style={{ fontSize: '21px', lineHeight: '1.5', color: '#605d5d', maxWidth: '60ch', margin: '36px 0 0', textWrap: 'pretty' }}>
-          Fifteen years building and leading product marketing for B2B technology. I've launched products used by thousands of customers, repositioned products to unlock growth, and built teams and GTM systems that make sellers more effective. Now I'm exploring what product marketing looks like when AI handles the production work and marketers spend more time on judgment.
+          Fifteen years building and leading product marketing for B2B technology. I've launched products used by thousands of customers, repositioned products to unlock growth, and built teams and GTM systems that make sellers more effective. Now I'm exploring what product marketing looks like when AI handles the more of the production work and marketers spend more time on judgment.
         </p>
         <div style={{ display: 'flex', gap: '16px', marginTop: '44px', flexWrap: 'wrap' }}>
           <Link href="/work" className="btn btn-primary">
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What it makes */}
+      {/* What my launch system makes */}
       <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '64px 40px' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '24px', marginBottom: '40px', flexWrap: 'wrap' }}>
@@ -92,11 +92,11 @@ export default function Home() {
           <div style={{ maxWidth: '760px' }}>
             <div style={{ display: 'flex', gap: '14px', alignItems: 'center', fontSize: '12px', fontWeight: '600', letterSpacing: '.1em', color: '#7d7979', marginBottom: '18px' }}>
               <span className="badge">AI</span>
-              <span>AUG 19, 2026 · 8 MIN</span>
+              <span>AUG 19, 2026</span>
             </div>
             <h3 style={{ marginBottom: '18px' }}>AI Won't Replace Product Marketers. But It Will Replace a Lot of Product Marketing Work.</h3>
             <p style={{ margin: '0 0 22px', fontSize: '17px', lineHeight: '1.65', color: '#444141', textWrap: 'pretty' }}>
-              The job was never the deck. It was deciding what the product means to a buyer, and holding that line across every surface. What's changing is how much of the week goes into turning that decision into artifacts — and the honest answer is: most of it, and it's going away.
+              The job was never the deck. It was deciding what the product means to a buyer and holding that line across every surface. What's changing is how much of the week goes into turning that decision into artifacts. The honest answer is: most of it, and it's going away.
             </p>
             <Link href="/insights" style={{ background: 'none', border: '0', padding: '0', cursor: 'pointer', fontFamily: 'var(--font-body)', fontWeight: '600', fontSize: '15px', color: '#2563eb' }}>
               Read more →
@@ -119,7 +119,11 @@ export default function Home() {
           </div>
           <div>
             <p style={{ fontSize: '17px', lineHeight: '1.65', color: '#444141', marginBottom: '24px', textWrap: 'pretty' }}>
-              Started in sales. Realized strategy only works if someone translates it for buyers—so I moved to product marketing. Spent fifteen years at places like Citrix and RingCentral closing that gap. Now building systems to automate the production layer: if the positioning is solid, the assets should nearly write themselves. This site is that system.
+              Started in sales. Realized strategy only works if someone translates it for buyers, so I moved to product marketing.
+
+I've spent nearly fifteen years at Citrix and RingCentral launching products, shaping positioning, building teams, enabling sales, and figuring out why good products sometimes don't sell.
+
+The thread through all of it is simple: understand what matters to the buyer, make the hard strategic choices, and build a go-to-market motion that carries those choices all the way to the field.
             </p>
             <Link href="/work" style={{ background: 'none', border: '0', padding: '0', cursor: 'pointer', fontFamily: 'var(--font-body)', fontWeight: '600', fontSize: '15px', color: '#2563eb' }}>
               See my work →
