@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Footer from '@/components/Footer';
 
 type Step = 'input' | 'review' | 'generating' | 'results';
 
@@ -416,4 +417,5 @@ export default function SystemPage() {
       </div>
     );
   }
+  <Footer />
 }

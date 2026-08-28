@@ -4,8 +4,6 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   category: string;
-  date: string;
-  readTime: string;
   content: string;
 }
 
@@ -14,167 +12,183 @@ export const blogPosts: BlogPost[] = [
     id: '1',
     slug: 'ai-replace-product-marketers',
     title: "AI Won't Replace Product Marketers. But It Will Replace a Lot of Product Marketing Work.",
-    excerpt: 'The job was never the deck. It was deciding what the product means to a buyer, and holding that line across every surface. What\'s changing is how much of the week goes into turning that decision into artifacts.',
+    excerpt: 'AI is making the production side of product marketing dramatically cheaper. That makes the judgment behind it more valuable.',
     category: 'AI',
-    date: 'AUG 19, 2026',
-    readTime: '8 MIN',
-    content: `# AI Won't Replace Product Marketers. But It Will Replace a Lot of Product Marketing Work.
-
-## The Real Question
-
-The conversation about AI and product marketing usually goes to extremes. One side thinks AI will replace us entirely. The other says marketing is too strategic to automate. I think both arguments focus on the wrong question.
-
-The job was never the deck. It was deciding what the product means to a buyer, and holding that line across every surface. What's changing is how much of the week goes into turning that decision into artifacts — and the honest answer is: most of it, and it's going away.
-
-## Judgment vs. Production
-
-Product marketing splits into two kinds of work:
-
-- **Judgment work:** Deciding what's true about your product and what matters to buyers. This is hard. It requires domain knowledge, market research, and intuition. This doesn't get automated.
-
-- **Production work:** Turning that judgment into launch pages, decks, one-pagers, sales battlecards, email sequences, website copy. This is time-consuming. This is exactly what AI is built for.
-
-## What Changes
-
-Right now, a marketer spends:
-- Tuesday deciding positioning
-- Wednesday through Friday writing and rewriting the deck
-- The following week rewriting it for sales
-- The following week rewriting it again for the website
-
-AI flips that. You spend Tuesday on positioning. Wednesday morning, you have a deck, a battlecard, and webpage copy that all agree with each other because they came from one input.
-
-What that frees up is time for the part that actually matters: deciding what's true.`
+    content: `The conversation about AI and product marketing usually goes to extremes...`
   },
   {
     id: '2',
-    slug: 'position-product-crowded-market',
-    title: 'How to Position a Product in a Crowded Market',
-    excerpt: 'When every competitor claims the same benefits, positioning becomes your only leverage. Here\'s how to find what actually matters to your buyer.',
-    category: 'Positioning',
-    date: 'JUL 2026',
-    readTime: '6 MIN',
-    content: `# How to Position a Product in a Crowded Market
-
-## The Problem
-
-When every competitor claims the same benefits, positioning becomes your only leverage. You can't win on features—they're all using the same technology or have feature parity by month two.
-
-Positioning is the difference between:
-- "We're a CRM that integrates with everything"
-- "We're built for teams that manage multiple customer relationships at once"
-
-One is a feature. One is a position.
-
-## Finding Your Position
-
-Start by answering three questions:
-
-### Who is your buyer, really?
-
-Not "companies with 100+ employees." That's market size. Who *specifically* has the problem you solve?
-
-Example: Not "SaaS companies" but "VP of Sales at series B SaaS companies who manage multiple sales motions."
-
-### What problem do they have that nobody else is addressing?
-
-This is where most positioning fails. You describe the problem everyone knows about. But there's usually a *secondary* problem that's more painful.
-
-Example: Everyone knows contact centers are fragmented. But the real problem for SMBs is they don't need enterprise features—they need simplicity at their scale.
-
-### Why should they believe you?
-
-What's your unfair advantage? Why are you uniquely positioned to solve this?`
+    slug: 'ai-what-to-automate-what-not',
+    title: 'AI for Product Marketing: What to Automate, What Not to Automate',
+    excerpt: 'AI can do a surprising amount of product marketing work. The question isn\'t whether it can—it\'s whether it should.',
+    category: 'AI',
+    content: `AI can do a surprising amount of product marketing work now...`
   },
   {
     id: '3',
-    slug: 'battlecard-nobody-reads',
-    title: 'The Battle Card Nobody Reads (And How to Fix It)',
-    excerpt: 'Most battlecards are beautiful PDFs that never leave the inbox. The problem isn\'t the format—it\'s that they\'re built for you, not for your sales team.',
-    category: 'GTM',
-    date: 'JUN 2026',
-    readTime: '7 MIN',
-    content: `# The Battle Card Nobody Reads (And How to Fix It)
-
-## Why Battlecards Fail
-
-Most battlecards are beautiful PDFs that never leave the inbox. Marketers spend weeks perfecting them. Sales ignores them.
-
-The problem isn't the format. It's that they're built for you, not for your sales team.
-
-A typical battlecard has:
-- Your positioning
-- Competitive differentiation
-- Proof points
-- Objection handling
-
-All of it is accurate. All of it is useless because it's organized the way *you* think, not the way a sales rep *needs* it.
-
-## How Sales Actually Needs It
-
-A sales rep doesn't need your positioning statement. They need:
-- What's the single thing that's different about us?
-- What do I say when they ask about [competitor]?
-- What proof do I have that we're better?
-- How do I handle the price objection?
-
-That's it. Everything else is noise.
-
-## The Fix
-
-Rewrite your battlecard for the sales conversation, not for marketing credibility. Use questions as the structure:
-
-- **What are we?**
-- **What's different?**
-- **Why should they care?**
-- **What about [competitor]?**
-
-Then under each one, write what a rep would actually say in a call.`
+    slug: 'how-i-built-ai-product-marketing-launch-system',
+    title: 'How I Built an AI Product Marketing Launch System',
+    excerpt: 'I\'m a product marketer, not a software engineer. But I built a working system that turns product strategy into go-to-market assets. Here\'s what I learned.',
+    category: 'AI',
+    content: `I'm a product marketer, not a software engineer...`
   },
   {
     id: '4',
-    slug: 'launch-messaging-keeps-shifting',
-    title: 'Why Your Launch Messaging Keeps Shifting',
-    excerpt: 'It\'s not because your team lacks discipline. It\'s because you started without a source of truth. Here\'s how to fix that.',
-    category: 'Messaging',
-    date: 'MAY 2026',
-    readTime: '5 MIN',
-    content: `# Why Your Launch Messaging Keeps Shifting
+    slug: 'go-to-market-strategy-7-decisions',
+    title: 'Go-to-Market Strategy: The 7 Decisions Every GTM Plan Needs',
+    excerpt: 'Most go-to-market strategies aren\'t strategies. They\'re launch plans filled with dates, deliverables, and tasks. Until you\'ve made seven core decisions, you don\'t have a strategy—you have a project plan.',
+    category: 'GTM',
+    content: `Most go-to-market strategies aren't strategies...`
+  },
+  {
+    id: '5',
+    slug: 'positioning-is-a-decision-not-messaging-exercise',
+    title: 'Positioning Is a Decision, Not a Messaging Exercise',
+    excerpt: 'A lot of positioning work starts too late. Companies try to solve positioning problems by rewriting copy. The problem usually isn\'t the words—it\'s that the strategic decisions haven\'t been made.',
+    category: 'Positioning',
+    content: `A lot of positioning work starts too late.
 
-## The Pattern
+Someone opens a document and starts writing value propositions. The team debates whether a headline is punchy enough. Someone wants to change "simplify" to "streamline." Three meetings later, everyone is still arguing about words.
 
-You nail your positioning in a strategy doc. Three weeks later, the website copy says something different. Two weeks after that, sales is pitching something else entirely.
+The problem usually isn't the words.
 
-By launch, nobody knows what the product actually means.
+Positioning is a set of strategic decisions about who your product is for, what problem you want to own, what you're competing against, and why a buyer should choose you.
 
-It's not because your team lacks discipline. It's because you started without a source of truth.
+Make those decisions first. The messaging gets a lot easier.
 
-## What Happens
+## Positioning Isn't What You Say
 
-Week 1: Positioning doc says "We're the platform for distributed teams"
+Positioning and messaging are related, but they aren't the same thing.
 
-Week 2: Marketing starts the website. Copy says "We solve remote work complexity"
+**Positioning determines what you want the market to understand. Messaging determines how you communicate it.**
 
-Week 3: Sales gets involved. They start saying "We integrate with your existing stack"
+That's an important distinction because companies often try to solve positioning problems by rewriting copy.
 
-Week 4: PR says "We're redefining how teams collaborate"
+If the team can't agree on the homepage headline, the problem might not be the headline. Sales, Product, and Marketing may have fundamentally different ideas about who the product is for or why someone should buy it.
 
-Now you have four different messages, all written by smart people trying to do their job.
+No copywriter can solve that.
 
-## The Fix
+Before you write the messaging, I think you need to make five decisions.
 
-Create one source of truth. Not a positioning doc. Not a strategy. A **messaging framework** that everyone pulls from.
+## 1. Who Is This For?
 
-It should contain:
-- Your core positioning (one sentence)
-- The problem you solve (specific, not generic)
-- Your value proposition
-- How you're different
-- Key proof points
+The broader the answer, the weaker the positioning usually gets.
 
-Then everyone—sales, marketing, PR, product—uses that framework as their foundation and adapts it for their channel.
+"Our product is for businesses that want to improve productivity" gives you almost nothing to work with. Neither does "enterprise IT leaders."
 
-Same message. Different medium.`
+Good positioning requires choosing a customer for whom your product is especially relevant.
+
+What kind of company? Which buyer? In what situation? What has happened that makes them care about this now?
+
+You may eventually sell to a much larger market. That doesn't mean your positioning has to speak equally to everyone in it.
+
+Trying to be relevant to everyone is one of the fastest ways to sound relevant to no one.
+
+## 2. What Problem Do We Want to Own?
+
+Most products solve more than one problem.
+
+That's where positioning gets difficult.
+
+Your product may save time, reduce costs, improve visibility, automate manual work, reduce risk, and make employees happier. Put all six on the homepage and you've made the buyer do the prioritization for you.
+
+Positioning requires choosing what leads.
+
+Which problem is painful enough to create action? Which one gives you the strongest connection between what the buyer needs and what your product does particularly well?
+
+The other benefits don't disappear. They become supporting evidence instead of competing for attention.
+
+## 3. What Are We Really Competing Against?
+
+The obvious answer is usually a list of competitors.
+
+That's often incomplete.
+
+A buyer might be comparing you with another software company. They might also be comparing you with a spreadsheet, an internal process, a cheaper tool they already own, building something themselves, or doing nothing.
+
+Those alternatives matter because positioning only makes sense relative to what the buyer would otherwise do.
+
+If the real competitor is the status quo, telling customers you're easier to use than Competitor X may not matter. You first have to convince them that changing anything is worth the effort.
+
+You can't establish meaningful differentiation until you know what you're differentiating from.
+
+## 4. Why Should They Choose Us?
+
+This is where positioning often turns into a feature comparison.
+
+We have AI. They don't.
+
+We have 200 integrations. They have 150.
+
+We're easier to use.
+
+We're more secure.
+
+Maybe those things matter. Maybe they don't.
+
+Differentiation only matters when it connects something you do differently to something the buyer values.
+
+The question isn't simply, "What's unique about our product?"
+
+It's:
+
+**What can we credibly claim that gives this buyer a meaningful reason to choose us over the alternatives?**
+
+That word "credibly" matters. If your positioning depends on a claim the product can't consistently deliver, you haven't created differentiation. You've created a future credibility problem.
+
+## 5. What Are We Willing Not to Say?
+
+This may be the hardest decision.
+
+Companies want every feature represented. Every stakeholder wants their priority included. Every audience seems too valuable to leave out.
+
+Eventually the positioning becomes a collection of compromises.
+
+Strong positioning requires subtraction.
+
+Choosing one problem means another problem gets less emphasis. Prioritizing one buyer means another buyer isn't at the center of the story. Leading with one differentiator means five features don't make the headline.
+
+That's not a failure of the positioning process.
+
+That's the positioning process.
+
+If nothing was excluded, you probably didn't make many decisions.
+
+## Then You Can Write the Messaging
+
+Once those five choices are clear, messaging becomes much more straightforward.
+
+You know who you're talking to. You know the problem you're leading with. You know what the buyer might do instead. You know why your approach is different. You know what you're deliberately not trying to communicate.
+
+Now you can decide how to express it.
+
+That's where headlines, value propositions, messaging pillars, proof points, sales talk tracks, and product narratives come in.
+
+There will still be debate. Words matter.
+
+But now you're debating **how to communicate the strategy**, not using a copywriting exercise to figure out what the strategy is.
+
+## Make the Decisions Before You Open the Document
+
+When positioning gets stuck, I'd spend less time asking whether the messaging is good and more time asking whether the underlying decisions have actually been made.
+
+Can everyone answer these five questions the same way?
+
+**Who is this for?**
+
+**What problem do we want to own?**
+
+**What are we really competing against?**
+
+**Why should they choose us?**
+
+**What are we willing not to say?**
+
+If the answers aren't clear, another round of copy probably won't help.
+
+Make the decisions first.
+
+Then write the words.`
   }
 ];
 

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           I build the systems that market the product.
         </h1>
         <p style={{ fontSize: '21px', lineHeight: '1.5', color: '#605d5d', maxWidth: '60ch', margin: '36px 0 0', textWrap: 'pretty' }}>
-          Fifteen years building and leading product marketing for B2B technology. I've launched products used by thousands of customers, repositioned products to unlock growth, and built teams and GTM systems that make sellers more effective. Now I'm exploring what product marketing looks like when AI handles the more of the production work and marketers spend more time on judgment.
+          Fifteen years building and leading product marketing for B2B technology. I've launched products used by thousands of customers, repositioned products to unlock growth, and built teams and GTM systems that make sellers more effective. Now I'm exploring what product marketing looks like when AI handles more of the production work and marketers spend more time on judgment.
         </p>
         <div style={{ display: 'flex', gap: '16px', marginTop: '44px', flexWrap: 'wrap' }}>
           <Link href="/work" className="btn btn-primary">
@@ -64,7 +65,7 @@ export default function Home() {
       <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '64px 40px' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '24px', marginBottom: '40px', flexWrap: 'wrap' }}>
-            <h2>What it makes</h2>
+            <h2>One strategy. Every asset.</h2>
             <Link href="/system" style={{ background: 'none', border: '0', padding: '0', cursor: 'pointer', fontFamily: 'var(--font-body)', fontWeight: '600', fontSize: '15px', color: '#2563eb' }}>
               Run it yourself →
             </Link>
@@ -106,31 +107,16 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)' }}>
-        <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '64px 40px', display: 'grid', gridTemplateColumns: '320px 1fr', gap: '56px', alignItems: 'start' }}>
-          <div style={{ aspectRatio: '4/5', background: 'repeating-linear-gradient(45deg,#e2dfdf 0 8px,#eae9e9 8px 16px)', display: 'flex', alignItems: 'flex-end', padding: '14px', filter: 'grayscale(1)' }}>
-            <Image
-              src="/headshot.jpg"
-              alt="Eric Kenney"
-              width={300}
-              height={375}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-          </div>
-          <div>
-            <p style={{ fontSize: '17px', lineHeight: '1.65', color: '#444141', marginBottom: '24px', textWrap: 'pretty' }}>
-              Started in sales. Realized strategy only works if someone translates it for buyers, so I moved to product marketing.
-
-I've spent nearly fifteen years at Citrix and RingCentral launching products, shaping positioning, building teams, enabling sales, and figuring out why good products sometimes don't sell.
-
-The thread through all of it is simple: understand what matters to the buyer, make the hard strategic choices, and build a go-to-market motion that carries those choices all the way to the field.
-            </p>
-            <Link href="/work" style={{ background: 'none', border: '0', padding: '0', cursor: 'pointer', fontFamily: 'var(--font-body)', fontWeight: '600', fontSize: '15px', color: '#2563eb' }}>
-              See my work →
-            </Link>
-          </div>
+      <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)', maxWidth: '1240px', margin: '0 auto', padding: '64px 40px' }}>
+        <div className="label" style={{ marginBottom: '48px' }}>ABOUT ERIC</div>
+        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+          <img src="/headshot.jpg" alt="Eric Kenney" style={{ width: '100%' }} />
+          <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#444141', margin: '0' }}>
+            Started in sales. Realized strategy only works if someone translates it for buyers, so I moved to product marketing. I've spent nearly fifteen years at Citrix and RingCentral launching products, shaping positioning, building teams, enabling sales, and figuring out why good products sometimes don't sell. The thread through all of it is simple: understand what matters to the buyer, make the hard strategic choices, and build a go-to-market motion that carries those choices all the way to the field.
+          </p>
         </div>
       </section>
     </div>
   );
+  <Footer />
 }
