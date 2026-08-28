@@ -180,7 +180,6 @@ const parseMarkdown = (text: string) => {
         <div>
           <div className="label">{post.category}</div>
           <div style={{ fontSize: '12px', color: '#7d7979', marginTop: '12px' }}>
-            {post.date} · {post.readTime}
           </div>
         </div>
 

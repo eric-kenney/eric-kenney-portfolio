@@ -32,7 +32,6 @@ export default function InsightsPage() {
         <div>
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '16px', fontSize: '12px', fontWeight: '600', color: '#7d7979' }}>
             <span className="badge">{featuredPost.category}</span>
-            <span>{featuredPost.date} · {featuredPost.readTime}</span>
           </div>
           <Link href={`/insights/${featuredPost.slug}`} style={{ textDecoration: 'none' }}>
             <h2 style={{ marginBottom: '16px', color: '#201e1d' }}>{featuredPost.title}</h2>
@@ -86,7 +85,6 @@ export default function InsightsPage() {
                   {post.excerpt}
                 </p>
                 <div style={{ fontSize: '12px', color: '#9b9797' }}>
-                  {post.date} · {post.readTime}
                 </div>
               </div>
             </Link>
