@@ -14,7 +14,23 @@ export const blogPosts: BlogPost[] = [
     title: "AI Won't Replace Product Marketers. But It Will Replace a Lot of Product Marketing Work.",
     excerpt: 'AI is making the production side of product marketing dramatically cheaper. That makes the judgment behind it more valuable.',
     category: 'AI',
-    content: `The conversation about AI and product marketing usually goes to extremes...`
+    content: `The conversation about AI and product marketing usually goes to extremes. One side thinks AI will replace product marketers entirely. The other says product marketing is too strategic, too creative, or too dependent on human judgment to automate.
+
+I think both arguments focus on the wrong question.
+
+The job was never the deck. It was deciding what the product means to a buyer and holding that line across every surface. What's changing is how much of the week goes into turning that decision into artifacts. And the honest answer is: a lot of it.
+
+## Will AI Replace Product Marketers?
+
+No. But AI will replace a significant amount of the work product marketers do today. That's an important distinction.
+
+Product marketing has accumulated an enormous production burden. We write messaging documents, build presentations, create battlecards, draft webpages, summarize research, prepare launch materials, adapt content for different audiences, and turn the same strategic decisions into dozens of different assets.
+
+Those things are part of the job. But they aren't the reason the job exists.
+
+Product marketing exists to understand markets and buyers, make strategic choices about how a product should compete, and translate those choices into a go-to-market motion that works.
+
+AI is getting very good at the translation part. The decision-making part is a different story.`
   },
   {
     id: '2',
@@ -22,7 +38,29 @@ export const blogPosts: BlogPost[] = [
     title: 'AI for Product Marketing: What to Automate, What Not to Automate',
     excerpt: 'AI can do a surprising amount of product marketing work. The question isn\'t whether it can—it\'s whether it should.',
     category: 'AI',
-    content: `AI can do a surprising amount of product marketing work now...`
+    content: `AI can do a surprising amount of product marketing work now.
+
+It can analyze customer interviews, summarize competitors, draft positioning, write a launch page, create a sales battlecard, build an email sequence, and turn all of it into a presentation before you've finished your second cup of coffee.
+
+The question isn't whether AI *can* do these things. It's whether it *should*.
+
+I've been experimenting with AI across product marketing workflows, including building competitive research agents, ROI calculators, and a system that turns product and market inputs into launch assets. The more I've built, the more I've come back to one rule:
+
+**Automate the work that follows a decision. Use AI to assist the work that informs a decision. Keep humans accountable for making the decision.**
+
+That's the difference between using AI to make product marketing better and simply using it to make more marketing.
+
+## What Should Product Marketers Automate With AI?
+
+The best candidates for automation are tasks where the important strategic decisions have already been made.
+
+Think about a sales battlecard. If you've already decided who the buyer is, which problem matters, how you're positioned, what differentiates you, and how you want to compete, creating the battlecard is mostly translation.
+
+Positioning requires choosing a customer for whom your product is especially relevant. What kind of company? Which buyer? In what situation? What has happened that makes them care about this now?
+
+Good answers require customer conversations, market knowledge, competitive context, data, experience, and sometimes intuition.
+
+**Automate production. Accelerate analysis. Own the judgment.**`
   },
   {
     id: '3',
@@ -30,7 +68,37 @@ export const blogPosts: BlogPost[] = [
     title: 'How I Built an AI Product Marketing Launch System',
     excerpt: 'I\'m a product marketer, not a software engineer. But I built a working system that turns product strategy into go-to-market assets. Here\'s what I learned.',
     category: 'AI',
-    content: `I'm a product marketer, not a software engineer...`
+    content: `I'm a product marketer, not a software engineer.
+
+But I wanted to test an idea.
+
+Product marketers spend a lot of time making strategic decisions about a launch: who the buyer is, which problem matters, how the product should be positioned, what makes it different, and how we're going to take it to market.
+
+Then we spend even more time translating those decisions into things. Messaging frameworks. Battlecards. Product webpages. Sales decks. Enablement. Launch content.
+
+What if we could make the strategic decisions once and build a system that carried them through the production layer?
+
+So I opened Claude Code and started building.
+
+The result is a working AI product marketing system that takes approved launch strategy and turns it into multiple go-to-market assets built from the same source of truth.
+
+## I Wanted to Automate Production, Not Product Marketing
+
+The idea came from a distinction I've been thinking about for a while.
+
+Product marketing has two broad kinds of work. There's **judgment work**: understanding the buyer, interpreting the market, choosing positioning, deciding what matters, evaluating differentiation, making pricing and packaging decisions, and figuring out how a product should go to market.
+
+Then there's **production work**: turning those decisions into the dozens of artifacts required to actually launch and sell something.
+
+AI is getting very good at the second category. I don't want it owning the first.
+
+That became the basic design principle for the system:
+
+**Humans make the strategic decisions. AI propagates those decisions through the production layer. Humans review the result.**
+
+Building an AI system for product marketing while *also* demonstrating that AI should automate production but not strategy was the deepest lesson. We proved it by doing it — the system takes strategic inputs and propagates them, but doesn't make the strategic decisions. That's the thesis, and the build embodied it.
+
+See my [Github repo](https://github.com/eric-kenney/ai-marketing-lab) and [try the AI product marketing launch system](/system) for yourself.`
   },
   {
     id: '4',
@@ -38,7 +106,35 @@ export const blogPosts: BlogPost[] = [
     title: 'Go-to-Market Strategy: The 7 Decisions Every GTM Plan Needs',
     excerpt: 'Most go-to-market strategies aren\'t strategies. They\'re launch plans filled with dates, deliverables, and tasks. Until you\'ve made seven core decisions, you don\'t have a strategy—you have a project plan.',
     category: 'GTM',
-    content: `Most go-to-market strategies aren't strategies...`
+    content: `Most go-to-market strategies aren't strategies. They're launch plans filled with dates, deliverables, channels, campaigns, sales enablement, and a long list of things everyone needs to get done before launch day.
+
+All of that matters, but none of it answers the most important questions. Who are we trying to win? What problem are we solving for them? Why should they choose us? What exactly are we asking them to buy? How will we sell it?
+
+Those are strategic decisions. Until you've made them, you don't have a go-to-market strategy. You have a project plan.
+
+## What Is a Go-to-Market Strategy?
+
+A go-to-market strategy is the set of decisions that determines how a product will compete, reach its target customer, and generate revenue. For most B2B products, I think it comes down to seven decisions:
+
+Who. Problem. Position. Offer. Motion. Reach. Measure.
+
+Get those right and the launch plan becomes much easier to build. Get them wrong and perfect execution just gets you to the wrong destination faster.
+
+## 1. Who Are We Trying to Win?
+
+"Enterprise companies" isn't an answer. Neither is "IT leaders." A useful target defines the companies, buyers, and situations where you have the strongest reason to win.
+
+Who has the problem? Who feels it most acutely? Who has the authority and budget to solve it? What makes this customer more attractive than everyone else who could theoretically use the product?
+
+One of the easiest ways to weaken a launch is to make the target market so broad that nobody has to make a choice. Good GTM strategy requires deciding not only who you're going after, but who you're not.
+
+## 2. What Problem Are We Solving?
+
+Products have features. Buyers have problems. Your GTM strategy needs to connect the two.
+
+The important question isn't "What does our product do?" It's what problem is important enough that this buyer will change what they're doing today?
+
+That's a much higher bar. A product can solve ten problems, but that doesn't mean all ten deserve equal weight in the go-to-market strategy. Choose the problem that creates urgency and gives the product a reason to exist.`
   },
   {
     id: '5',
@@ -96,99 +192,7 @@ Positioning requires choosing what leads.
 
 Which problem is painful enough to create action? Which one gives you the strongest connection between what the buyer needs and what your product does particularly well?
 
-The other benefits don't disappear. They become supporting evidence instead of competing for attention.
-
-## 3. What Are We Really Competing Against?
-
-The obvious answer is usually a list of competitors.
-
-That's often incomplete.
-
-A buyer might be comparing you with another software company. They might also be comparing you with a spreadsheet, an internal process, a cheaper tool they already own, building something themselves, or doing nothing.
-
-Those alternatives matter because positioning only makes sense relative to what the buyer would otherwise do.
-
-If the real competitor is the status quo, telling customers you're easier to use than Competitor X may not matter. You first have to convince them that changing anything is worth the effort.
-
-You can't establish meaningful differentiation until you know what you're differentiating from.
-
-## 4. Why Should They Choose Us?
-
-This is where positioning often turns into a feature comparison.
-
-We have AI. They don't.
-
-We have 200 integrations. They have 150.
-
-We're easier to use.
-
-We're more secure.
-
-Maybe those things matter. Maybe they don't.
-
-Differentiation only matters when it connects something you do differently to something the buyer values.
-
-The question isn't simply, "What's unique about our product?"
-
-It's:
-
-**What can we credibly claim that gives this buyer a meaningful reason to choose us over the alternatives?**
-
-That word "credibly" matters. If your positioning depends on a claim the product can't consistently deliver, you haven't created differentiation. You've created a future credibility problem.
-
-## 5. What Are We Willing Not to Say?
-
-This may be the hardest decision.
-
-Companies want every feature represented. Every stakeholder wants their priority included. Every audience seems too valuable to leave out.
-
-Eventually the positioning becomes a collection of compromises.
-
-Strong positioning requires subtraction.
-
-Choosing one problem means another problem gets less emphasis. Prioritizing one buyer means another buyer isn't at the center of the story. Leading with one differentiator means five features don't make the headline.
-
-That's not a failure of the positioning process.
-
-That's the positioning process.
-
-If nothing was excluded, you probably didn't make many decisions.
-
-## Then You Can Write the Messaging
-
-Once those five choices are clear, messaging becomes much more straightforward.
-
-You know who you're talking to. You know the problem you're leading with. You know what the buyer might do instead. You know why your approach is different. You know what you're deliberately not trying to communicate.
-
-Now you can decide how to express it.
-
-That's where headlines, value propositions, messaging pillars, proof points, sales talk tracks, and product narratives come in.
-
-There will still be debate. Words matter.
-
-But now you're debating **how to communicate the strategy**, not using a copywriting exercise to figure out what the strategy is.
-
-## Make the Decisions Before You Open the Document
-
-When positioning gets stuck, I'd spend less time asking whether the messaging is good and more time asking whether the underlying decisions have actually been made.
-
-Can everyone answer these five questions the same way?
-
-**Who is this for?**
-
-**What problem do we want to own?**
-
-**What are we really competing against?**
-
-**Why should they choose us?**
-
-**What are we willing not to say?**
-
-If the answers aren't clear, another round of copy probably won't help.
-
-Make the decisions first.
-
-Then write the words.`
+The other benefits don't disappear. They become supporting evidence instead of competing for attention.`
   }
 ];
 
