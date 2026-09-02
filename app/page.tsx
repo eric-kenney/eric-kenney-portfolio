@@ -18,7 +18,7 @@ export default function Home() {
         <p style={{ fontSize: 'clamp(15px, 2.2vw, 21px)', lineHeight: '1.5', color: '#605d5d', maxWidth: '60ch', margin: 'clamp(24px, 3vw, 36px) 0 0', textWrap: 'pretty' }}>
           Fifteen years building and leading product marketing for B2B technology. I've launched products used by thousands of customers, repositioned products to unlock growth, and built teams and GTM systems that make sellers more effective. Now I'm exploring what product marketing looks like when AI handles more of the production work and marketers spend more time on judgment.
         </p>
-        <div style={{ display: 'flex', gap: 'clamp(12px, 2vw, 16px)', marginTop: 'clamp(32px, 4vw, 44px)', flexWrap: 'wrap' }}>
+        <div className="button-group" style={{ gap: 'clamp(12px, 2vw, 16px)', marginTop: 'clamp(32px, 4vw, 44px)' }}>
           <Link href="/work" className="btn btn-primary">
             See my work→
           </Link>
@@ -34,11 +34,8 @@ export default function Home() {
           maxWidth: '1240px', 
           margin: '0 auto', 
           padding: 'clamp(40px, 5vw, 64px) clamp(16px, 4vw, 40px)',
-          display: 'grid',
-          gridTemplateColumns: 'minmax(180px, 200px) 1fr',
-          gap: 'clamp(24px, 4vw, 48px)'
         }}>
-          <div className="label">MY WORK BY THE NUMBERS</div>
+          <div className="label" style={{ marginBottom: 'clamp(28px, 4vw, 48px)' }}>MY WORK BY THE NUMBERS</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'clamp(24px, 3vw, 40px)' }}>
             <div>
               <div style={{ fontSize: 'clamp(24px, 4vw, 32px)', fontWeight: '800', color: '#201e1d', marginBottom: '8px' }}>10,000+</div>
@@ -71,9 +68,9 @@ export default function Home() {
       {/* What my launch system makes */}
       <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto', padding: 'clamp(40px, 5vw, 64px) clamp(16px, 4vw, 40px)' }}>
-          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 'clamp(16px, 3vw, 24px)', marginBottom: 'clamp(28px, 3vw, 40px)', flexWrap: 'wrap' }}>
-            <h2>One strategy. Every asset.</h2>
-            <Link href="/system" style={{ background: 'none', border: '0', padding: '0', cursor: 'pointer', fontFamily: 'var(--font-body)', fontWeight: '600', fontSize: 'clamp(13px, 1.8vw, 15px)', color: '#2563eb', whiteSpace: 'nowrap' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 'clamp(12px, 2vw, 24px)', marginBottom: 'clamp(28px, 3vw, 40px)', flexWrap: 'wrap' }}>
+            <h2 style={{ margin: 0, flex: '1 1 auto' }}>One strategy. Every asset.</h2>
+            <Link href="/system" style={{ background: 'none', border: '0', padding: '0', cursor: 'pointer', fontFamily: 'var(--font-body)', fontWeight: '600', fontSize: 'clamp(13px, 1.8vw, 15px)', color: '#2563eb', whiteSpace: 'nowrap', flexShrink: 0 }}>
               Run it yourself →
             </Link>
           </div>
@@ -99,12 +96,9 @@ export default function Home() {
           maxWidth: '1240px', 
           margin: '0 auto', 
           padding: 'clamp(40px, 5vw, 64px) clamp(16px, 4vw, 40px)',
-          display: 'grid',
-          gridTemplateColumns: 'minmax(180px, 200px) 1fr',
-          gap: 'clamp(24px, 4vw, 48px)'
         }}>
-          <div className="label">FEATURED INSIGHT</div>
-          <div style={{ maxWidth: '760px' }}>
+          <div className="label" style={{ marginBottom: 'clamp(28px, 4vw, 48px)' }}>FEATURED INSIGHT</div>
+          <div style={{ maxWidth: '760px', margin: '0 auto' }}>
             <div style={{ display: 'flex', gap: '14px', alignItems: 'center', fontSize: 'clamp(10px, 1.5vw, 12px)', fontWeight: '600', letterSpacing: '.1em', color: '#7d7979', marginBottom: '16px', flexWrap: 'wrap' }}>
               <span className="badge">AI</span>
               <span>AUG 19, 2026</span>
@@ -123,8 +117,8 @@ export default function Home() {
       {/* About */}
       <section style={{ borderTop: '2px solid rgba(32, 30, 29, 0.4)', maxWidth: '1240px', margin: '0 auto', padding: 'clamp(40px, 5vw, 64px) clamp(16px, 4vw, 40px)' }}>
         <div className="label" style={{ marginBottom: 'clamp(32px, 4vw, 48px)' }}>ABOUT ERIC</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 220px) 1fr', gap: 'clamp(24px, 4vw, 48px)' }}>
-          <img src="/headshot.jpg" alt="Eric Kenney" style={{ width: '100%', maxWidth: '280px' }} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'clamp(24px, 4vw, 48px)' }}>
+          <img src="/headshot.jpg" alt="Eric Kenney" style={{ width: '100%', maxWidth: '280px', height: 'auto' }} />
           <p style={{ fontSize: 'clamp(14px, 1.9vw, 15px)', lineHeight: '1.65', color: '#444141', margin: '0' }}>
             Started in sales. Realized strategy only works if someone translates it for buyers, so I moved to product marketing. I've spent nearly fifteen years at Citrix and RingCentral launching products, shaping positioning, building teams, enabling sales, and figuring out why good products sometimes don't sell. The thread through all of it is simple: understand what matters to the buyer, make the hard strategic choices, and build a go-to-market motion that carries those choices all the way to the field.
           </p>

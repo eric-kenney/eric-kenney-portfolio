@@ -63,6 +63,11 @@ export default function Navigation() {
           cursor: pointer;
           padding: 0.5rem;
           color: #201e1d;
+          min-width: 44px;
+          min-height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .mobile-menu {
@@ -77,6 +82,14 @@ export default function Navigation() {
           padding: 1rem;
           z-index: 50;
           animation: slideDown 0.2s ease-out;
+        }
+
+        .mobile-menu a {
+          display: block;
+          padding: 0.75rem 0;
+          color: #6b7280;
+          text-decoration: none;
+          font-size: clamp(0.875rem, 1.8vw, 1rem);
         }
 
         @keyframes slideDown {
@@ -96,7 +109,7 @@ export default function Navigation() {
           }
 
           .mobile-menu-button {
-            display: block !important;
+            display: flex !important;
           }
 
           .mobile-menu {
