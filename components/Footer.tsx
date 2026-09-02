@@ -14,6 +14,9 @@ export default function Footer() {
           <a href="mailto:eric.kenney77@gmail.com" style={styles.link}>
             Get in touch
           </a>
+          <a href="https://github.com/eric-kenney/ai-marketing-lab" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none', marginRight: '24px' }}>
+  GitHub
+</a>
         </div>
 
         <p style={styles.copyright}>© 2026 Eric Kenney</p>
