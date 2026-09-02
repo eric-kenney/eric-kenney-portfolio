@@ -20,7 +20,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!post) {
     return (
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px', textAlign: 'center' }}>
+      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: 'clamp(40px, 5vw, 80px) clamp(16px, 4vw, 40px)', textAlign: 'center' }}>
         <h1>Post not found</h1>
         <Link href="/insights" style={{ color: '#2563eb', fontWeight: '600' }}>
           ← Back to insights
@@ -32,13 +32,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 const parseMarkdown = (text: string) => {
   return text.split('\n').map((line, idx) => {
     if (line.startsWith('# ')) {
-      return <h1 key={idx} style={{ fontSize: '28px', fontWeight: '800', margin: '24px 0 16px', letterSpacing: '-0.015em' }}>{line.replace('# ', '')}</h1>;
+      return <h1 key={idx} style={{ fontSize: 'clamp(24px, 5vw, 28px)', fontWeight: '800', margin: 'clamp(16px, 2vw, 24px) 0 clamp(12px, 1.5vw, 16px)', letterSpacing: '-0.015em', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.replace('# ', '')}</h1>;
     }
     if (line.startsWith('## ')) {
-      return <h2 key={idx} style={{ fontSize: '22px', fontWeight: '800', margin: '20px 0 12px', letterSpacing: '-0.015em' }}>{line.replace('## ', '')}</h2>;
+      return <h2 key={idx} style={{ fontSize: 'clamp(20px, 3.5vw, 22px)', fontWeight: '800', margin: 'clamp(16px, 2vw, 20px) 0 clamp(10px, 1.5vw, 12px)', letterSpacing: '-0.015em', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.replace('## ', '')}</h2>;
     }
     if (line.startsWith('### ')) {
-      return <h3 key={idx} style={{ fontSize: '18px', fontWeight: '800', margin: '16px 0 10px', letterSpacing: '-0.015em' }}>{line.replace('### ', '')}</h3>;
+      return <h3 key={idx} style={{ fontSize: 'clamp(16px, 2.5vw, 18px)', fontWeight: '800', margin: 'clamp(12px, 1.5vw, 16px) 0 clamp(8px, 1vw, 10px)', letterSpacing: '-0.015em', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.replace('### ', '')}</h3>;
     }
 
     // Handle bullet points with bold text and links
@@ -96,8 +96,8 @@ const parseMarkdown = (text: string) => {
       parts = segments.map((seg, i) => {
         if (seg.type === 'link') {
           return seg.url?.startsWith('/') ? 
-            <Link key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600' }}>{seg.content}</Link> :
-            <a key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600' }}>{seg.content}</a>;
+            <Link key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{seg.content}</Link> :
+            <a key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{seg.content}</a>;
         } else if (seg.type === 'bold') {
           return <strong key={i} style={{ fontWeight: '600' }}>{seg.content}</strong>;
         } else {
@@ -105,7 +105,7 @@ const parseMarkdown = (text: string) => {
         }
       });
       
-      return <li key={idx} style={{ margin: '6px 0 6px 20px', lineHeight: '1.65', color: '#444141' }}>{parts}</li>;
+      return <li key={idx} style={{ margin: '6px 0 6px 20px', lineHeight: '1.65', color: '#444141', fontSize: 'clamp(14px, 1.8vw, 15px)', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{parts}</li>;
     }
 
     // Handle regular paragraphs with bold text and links
@@ -154,8 +154,8 @@ const parseMarkdown = (text: string) => {
       const parts = segments.map((seg, i) => {
         if (seg.type === 'link') {
           return seg.url?.startsWith('/') ? 
-            <Link key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600' }}>{seg.content}</Link> :
-            <a key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600' }}>{seg.content}</a>;
+            <Link key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{seg.content}</Link> :
+            <a key={i} href={seg.url} style={{ color: '#2563eb', fontWeight: '600', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{seg.content}</a>;
         } else if (seg.type === 'bold') {
           return <strong key={i} style={{ fontWeight: '600' }}>{seg.content}</strong>;
         } else {
@@ -163,7 +163,7 @@ const parseMarkdown = (text: string) => {
         }
       });
       
-      return <p key={idx} style={{ margin: '8px 0', lineHeight: '1.65', color: '#444141' }}>{parts}</p>;
+      return <p key={idx} style={{ margin: 'clamp(8px, 1vw, 12px) 0', lineHeight: '1.65', color: '#444141', fontSize: 'clamp(14px, 1.8vw, 15px)', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{parts}</p>;
     }
 
     return <div key={idx} style={{ height: '12px' }}></div>;
@@ -171,26 +171,23 @@ const parseMarkdown = (text: string) => {
 };
 
   return (
-    <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
-      <Link href="/insights" style={{ color: '#2563eb', fontSize: '15px', fontWeight: '600', marginBottom: '40px', display: 'inline-block' }}>
+    <div style={{ maxWidth: '1240px', margin: '0 auto', padding: 'clamp(40px, 5vw, 80px) clamp(16px, 4vw, 40px)', minHeight: '100vh' }}>
+      <Link href="/insights" style={{ color: '#2563eb', fontSize: 'clamp(13px, 1.8vw, 15px)', fontWeight: '600', marginBottom: 'clamp(24px, 3vw, 40px)', display: 'inline-block', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
         ← Back to insights
       </Link>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
-        <div>
-          <div className="label">{post.category}</div>
-          <div style={{ fontSize: '12px', color: '#7d7979', marginTop: '12px' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{ marginBottom: 'clamp(20px, 2vw, 32px)' }}>
+          <div className="label" style={{ marginBottom: 'clamp(12px, 1.5vw, 16px)' }}>{post.category}</div>
+          <div style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: '#7d7979', marginTop: '12px' }}>
           </div>
         </div>
 
-        <div style={{ maxWidth: '800px' }}>
-          <h1 style={{ marginBottom: '32px' }}>{post.title}</h1>
-          <div style={{ fontSize: '15px', lineHeight: '1.65', color: '#444141' }}>
-            {parseMarkdown(post.content)}
-          </div>
+        <div style={{ fontSize: 'clamp(14px, 1.8vw, 15px)', lineHeight: '1.65', color: '#444141' }}>
+          <h1 style={{ marginBottom: 'clamp(20px, 3vw, 32px)', fontSize: 'clamp(28px, 6vw, 48px)', fontWeight: '800', lineHeight: '1.15', letterSpacing: '-0.025em', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{post.title}</h1>
+          {parseMarkdown(post.content)}
         </div>
       </div>
     </div>
   );
-  <Footer />
 }
