@@ -171,23 +171,26 @@ const parseMarkdown = (text: string) => {
 };
 
   return (
-    <div style={{ maxWidth: '1240px', margin: '0 auto', padding: 'clamp(40px, 5vw, 80px) clamp(16px, 4vw, 40px)', minHeight: '100vh' }}>
-      <Link href="/insights" style={{ color: '#2563eb', fontSize: 'clamp(13px, 1.8vw, 15px)', fontWeight: '600', marginBottom: 'clamp(24px, 3vw, 40px)', display: 'inline-block', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-        ← Back to insights
-      </Link>
+    <>
+      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: 'clamp(40px, 5vw, 80px) clamp(16px, 4vw, 40px)', minHeight: '100vh' }}>
+        <Link href="/insights" style={{ color: '#2563eb', fontSize: 'clamp(13px, 1.8vw, 15px)', fontWeight: '600', marginBottom: 'clamp(24px, 3vw, 40px)', display: 'inline-block', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+          ← Back to insights
+        </Link>
 
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <div style={{ marginBottom: 'clamp(20px, 2vw, 32px)' }}>
-          <div className="label" style={{ marginBottom: 'clamp(12px, 1.5vw, 16px)' }}>{post.category}</div>
-          <div style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: '#7d7979', marginTop: '12px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ marginBottom: 'clamp(20px, 2vw, 32px)' }}>
+            <div className="label" style={{ marginBottom: 'clamp(12px, 1.5vw, 16px)' }}>{post.category}</div>
+            <div style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: '#7d7979', marginTop: '12px' }}>
+            </div>
+          </div>
+
+          <div style={{ fontSize: 'clamp(14px, 1.8vw, 15px)', lineHeight: '1.65', color: '#444141' }}>
+            <h1 style={{ marginBottom: 'clamp(20px, 3vw, 32px)', fontSize: 'clamp(28px, 6vw, 48px)', fontWeight: '800', lineHeight: '1.15', letterSpacing: '-0.025em', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{post.title}</h1>
+            {parseMarkdown(post.content)}
           </div>
         </div>
-
-        <div style={{ fontSize: 'clamp(14px, 1.8vw, 15px)', lineHeight: '1.65', color: '#444141' }}>
-          <h1 style={{ marginBottom: 'clamp(20px, 3vw, 32px)', fontSize: 'clamp(28px, 6vw, 48px)', fontWeight: '800', lineHeight: '1.15', letterSpacing: '-0.025em', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{post.title}</h1>
-          {parseMarkdown(post.content)}
-        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

@@ -89,6 +89,7 @@ export default function InsightsPage() {
           ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
