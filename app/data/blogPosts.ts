@@ -831,6 +831,143 @@ Make the decisions first.
 
 Then write the words.`
   }
+  {
+  id: '6',
+  slug: 'how-to-know-if-your-product-messaging-is-working',
+  title: 'How to Know If Your Product Messaging Is Working',
+  excerpt: 'Product messaging is one of those things companies spend weeks creating and surprisingly little time measuring. The better way to evaluate it is to look for evidence across four things: understand, care, believe, act.',
+  category: 'Messaging',
+  content: `Product messaging is one of those things companies spend weeks creating and surprisingly little time measuring. The messaging framework gets approved. The website gets updated. Sales gets a new deck. Campaigns go live. Then everyone moves on.
+
+But how do you know if the messaging is actually working?
+
+You can't answer that with one metric. A higher click-through rate might mean you wrote a better headline. A higher win rate might have nothing to do with messaging at all.
+
+I think the better way to evaluate product messaging is to look for evidence that it's doing four things:
+
+**Understand. Care. Believe. Act.**
+
+If buyers understand your message, care about what you're saying, believe your claims, and ultimately act differently because of it, your messaging is probably doing its job.
+
+## 1. Understand: Do Buyers Get It?
+
+Start with the most basic test. Can someone in your target market quickly explain what your product does, who it's for, and what problem it solves?
+
+Not after a 30-minute demo or after a salesperson explains it. After encountering the message on its own.
+
+This is where internal teams are particularly bad judges. We've spent months or years around the product, so we automatically fill in information that isn't actually in the message.
+
+Put your messaging in front of people who match your target buyer and ask them to explain it back to you. Don't ask, "Was that clear?" Most people will say yes.
+
+Ask:
+
+- What do you think this product does?
+- Who do you think it's for?
+- What problem do you think it solves?
+
+If their answers consistently differ from yours, you have a messaging problem.
+
+## 2. Care: Does the Message Make the Problem Matter?
+
+Clarity isn't enough. I can understand exactly what a product does and still have absolutely no interest in buying it.
+
+That's why the next question is whether the message connects the product to something the buyer actually cares about.
+
+Listen carefully to how customers react.
+
+- Do they recognize the problem immediately?
+- Do they expand on it?
+- Do they tell you how they're dealing with it today?
+- Does the conversation move naturally toward the consequences of not solving it?
+
+Those reactions tell you far more than asking someone whether your value proposition "resonates."
+
+You can also see evidence further down the funnel. If people understand what you're offering but aren't clicking, responding, requesting demos, or moving forward, you may not have a clarity problem. You may have a relevance problem.
+
+That distinction matters because rewriting the same value proposition with different words won't make an unimportant problem important.
+
+## 3. Believe: Do Buyers Accept the Story?
+
+A buyer can understand your message and care deeply about the problem but still not believe you can solve it.
+
+This is where messaging has to move beyond a compelling value proposition. Can you prove it?
+
+Customer results, product demonstrations, specific capabilities, credible data, testimonials, competitive evidence, and other proof points all help turn a marketing claim into something a buyer can believe.
+
+This is also where differentiation gets tested. If buyers hear your message and respond with, "Doesn't everyone do that?" you have a problem. You may have described the category clearly without giving them a reason to choose you.
+
+Ask customers and prospects what they think is different about your approach. Better yet, listen to how your champions describe that difference when you're not feeding them the answer.
+
+If customers repeat your differentiation back to you in their own words, that's strong evidence your messaging is taking hold.
+
+## 4. Act: Does the Message Change Behavior?
+
+Eventually, messaging has to do more than test well in an interview. It has to change what people do.
+
+That's where quantitative evidence becomes useful. Depending on the business, that could mean changes in conversion, demo requests, campaign engagement, pipeline progression, win rate, product adoption, expansion, or another behavior tied to the message you're testing.
+
+The important thing is not to confuse correlation with causation. If you launch new messaging and win rate increases, great. But maybe Sales improved, the product changed, pricing changed, or a competitor stumbled.
+
+Look for multiple signals pointing in the same direction. If customers understand the new message more consistently, Sales says it's creating better conversations, prospects repeat the language back, conversion improves, and win/loss interviews show stronger differentiation, you have a much more convincing case.
+
+**Messaging effectiveness is usually a body of evidence, not a single dashboard number.**
+
+## Test the Message, Not Just the Copy
+
+There's another distinction worth making. A/B testing two homepage headlines can tell you which headline performs better. It doesn't necessarily tell you whether the underlying message is right. That's copy testing.
+
+If version A says "Automate your workflow" and version B says "Work smarter with AI," you're testing two expressions of an idea. You haven't necessarily tested whether workflow automation is the problem your buyer cares about.
+
+Start upstream. Test the problem. Test the value. Test the differentiation. Test the proof.
+
+Once you're confident in those things, optimize how they're expressed. Otherwise, you risk getting very good at communicating the wrong message.
+
+## Sales Is One of Your Best Messaging Research Channels
+
+Product marketers sometimes treat Sales as the audience for messaging rather than a source of evidence about it. That's a mistake.
+
+Your sales team runs messaging tests every day. They hear which problem statements get prospects talking, which claims create skepticism, which differentiators competitors neutralize, and which proof points move conversations forward.
+
+Don't just ask Sales, "Is the messaging working?" Ask what they're hearing.
+
+- Which part of the story gets the strongest reaction?
+- Where do prospects push back?
+- What language are customers using instead of ours?
+- Which claims require explanation?
+- What gets repeated later in the sales cycle?
+
+AI-powered conversation intelligence makes it possible to answer those questions at scale. Instead of listening to a handful of calls or relying on anecdotal feedback, product marketers can analyze large volumes of customer conversations for specific messages, themes, objections, competitor mentions, and buyer reactions.
+
+That creates an interesting opportunity for product marketing. A new message doesn't have to disappear into the field after enablement. You can establish a baseline, introduce the message, measure whether sellers are actually using it, analyze how buyers respond, and look for patterns across won and lost deals.
+
+Imagine introducing a new differentiation message and being able to answer:
+
+- How often is Sales using it?
+- Which buyers respond to it?
+- What objections follow it?
+- Does it appear more frequently in successful deals?
+- Are customers repeating the same idea back later in the sales cycle?
+
+Conversation intelligence won't prove that a particular message caused a deal to close. But it can turn thousands of sales conversations into a messaging research dataset rather than leaving all that customer evidence trapped inside individual calls.
+
+Combine that with direct sales feedback, customer research, win/loss analysis, and performance data, and you have a much stronger signal of whether your messaging is actually working.
+
+## Messaging Is Never Really Finished
+
+Messaging frameworks often feel like finished deliverables. In reality, they're hypotheses.
+
+You're making a bet that a particular buyer cares about a particular problem, will value a particular outcome, and will believe a particular reason for choosing you.
+
+The market tells you whether you were right.
+
+That's why I'd worry less about whether everyone internally loves the messaging and more about whether you're seeing evidence across four questions:
+
+**Do buyers understand it? Do they care? Do they believe it? Do they act?**
+
+If the answer is yes across all four, don't rewrite the messaging because someone has a new idea for the homepage. If the answer is no, figure out where the chain breaks.
+
+That's the real value of measuring messaging. It doesn't just tell you that something isn't working. It tells you what to fix.`
+}
 ];
 
 export const getBlogPostBySlug = (slug: string) => {
