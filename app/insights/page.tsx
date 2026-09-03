@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { blogPosts } from '@/app/data/blogPosts';
-import Footer from '@/components/Footer';
 
 export default function InsightsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');

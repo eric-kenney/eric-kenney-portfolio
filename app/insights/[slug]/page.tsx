@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getBlogPostBySlug, blogPosts } from '@/app/data/blogPosts';
-import Footer from '@/components/Footer';
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
