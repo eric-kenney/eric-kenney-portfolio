@@ -967,7 +967,7 @@ That's why I'd worry less about whether everyone internally loves the messaging 
 If the answer is yes across all four, don't rewrite the messaging because someone has a new idea for the homepage. If the answer is no, figure out where the chain breaks.
 
 That's the real value of measuring messaging. It doesn't just tell you that something isn't working. It tells you what to fix.`
-}
+  }
 ];
 
 export const getBlogPostBySlug = (slug: string) => {
