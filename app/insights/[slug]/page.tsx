@@ -189,7 +189,6 @@ const parseMarkdown = (text: string) => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
