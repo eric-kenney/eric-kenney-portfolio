@@ -5,6 +5,28 @@ import Footer from '@/components/Footer';
 
 type Step = 'input' | 'review' | 'generating' | 'results';
 
+// Responsive layout helpers
+const containerStyle = {
+  maxWidth: '1240px',
+  margin: '0 auto',
+  padding: 'clamp(32px, 5vw, 80px) clamp(16px, 5vw, 40px)',
+} as const;
+
+const twoColGridStyle = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+  gap: 'clamp(24px, 5vw, 48px)',
+  '@media (max-width: 768px)': {
+    gridTemplateColumns: '1fr',
+  }
+} as const;
+
+const responsiveGridStyle = (smallScreen = false) => ({
+  display: 'grid',
+  gridTemplateColumns: smallScreen ? '1fr' : 'repeat(auto-fit, minmax(220px, 1fr))',
+  gap: 'clamp(24px, 5vw, 48px)',
+});
+
 interface GeneratedAssets {
   messaging_framework: string;
   sales_battlecard: string;
@@ -153,23 +175,24 @@ export default function SystemPage() {
 
   // Input step
   if (step === 'input') {
+    const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
     return (
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px', marginBottom: '60px' }}>
+      <div style={containerStyle}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? '1fr' : '220px 1fr', gap: 'clamp(24px, 5vw, 48px)', marginBottom: 'clamp(40px, 10vw, 60px)' }}>
           <div className="label">MARKETING ASSET GENERATOR</div>
           <div>
-            <h1 style={{ marginBottom: '20px' }}>Generate your launch assets</h1>
-            <p style={{ fontSize: '17px', lineHeight: '1.65', color: '#444141', maxWidth: '60ch' }}>
+            <h1 style={{ marginBottom: '20px', fontSize: 'clamp(28px, 8vw, 42px)' }}>Generate your launch assets</h1>
+            <p style={{ fontSize: 'clamp(15px, 4vw, 17px)', lineHeight: '1.65', color: '#444141', maxWidth: '60ch' }}>
               Describe your launch. Answer three questions. We'll create a messaging framework, sales battlecard, and product webpage.
             </p>
           </div>
         </div>
 
-        {error && <div style={{ background: '#fee', color: '#c00', padding: '16px', marginBottom: '32px', border: '1px solid #fcc' }}>{error}</div>}
+        {error && <div style={{ background: '#fee', color: '#c00', padding: '16px', marginBottom: '32px', border: '1px solid #fcc', fontSize: '14px' }}>{error}</div>}
 
-        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? '1fr' : '220px 1fr', gap: 'clamp(24px, 5vw, 48px)' }}>
           <div></div>
-          <div style={{ maxWidth: '600px' }}>
+          <div style={{ width: '100%', maxWidth: '600px' }}>
             <div style={{ marginBottom: '32px' }}>
               <label style={{ display: 'block', fontSize: '14px', fontWeight: '600', marginBottom: '8px', color: '#201e1d' }}>
                 Product name and description
@@ -220,16 +243,17 @@ export default function SystemPage() {
 
   // Review step
   if (step === 'review') {
+    const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
     return (
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
+      <div style={containerStyle}>
         <button
           onClick={() => setStep('input')}
-          style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: '15px', fontWeight: '600', cursor: 'pointer', marginBottom: '40px' }}
+          style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: 'clamp(13px, 4vw, 15px)', fontWeight: '600', cursor: 'pointer', marginBottom: 'clamp(24px, 5vw, 40px)' }}
         >
           ← Back
         </button>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? '1fr' : '220px 1fr', gap: 'clamp(24px, 5vw, 48px)' }}>
           <div className="label">REVIEW & CONFIRM</div>
           <div>
             <h1 style={{ marginBottom: '40px' }}>Your launch brief</h1>
@@ -267,13 +291,14 @@ export default function SystemPage() {
 
   // Generating step
   if (step === 'generating') {
+    const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
     return (
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+      <div style={containerStyle}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? '1fr' : '220px 1fr', gap: 'clamp(24px, 5vw, 48px)' }}>
           <div className="label">GENERATING</div>
           <div>
-            <h1 style={{ marginBottom: '12px' }}>Creating your assets</h1>
-            <p style={{ fontSize: '15px', color: '#7d7979', marginBottom: '40px' }}>
+            <h1 style={{ marginBottom: '12px', fontSize: 'clamp(28px, 8vw, 42px)' }}>Creating your assets</h1>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 15px)', color: '#7d7979', marginBottom: '40px' }}>
               This typically takes 30-60 seconds. Please wait while we generate your messaging framework, sales battlecard, and product webpage.
             </p>
 
@@ -321,23 +346,24 @@ export default function SystemPage() {
 
   // Results step - expanded view
   if (step === 'results' && results && expandedAsset) {
+    const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
     return (
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
+      <div style={containerStyle}>
         <button
           onClick={() => setExpandedAsset(null)}
-          style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: '15px', fontWeight: '600', cursor: 'pointer', marginBottom: '40px' }}
+          style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: 'clamp(13px, 4vw, 15px)', fontWeight: '600', cursor: 'pointer', marginBottom: 'clamp(24px, 5vw, 40px)' }}
         >
           ← Back to results
         </button>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? '1fr' : '220px 1fr', gap: 'clamp(24px, 5vw, 48px)' }}>
           <div className="label">
             {expandedAsset === 'messaging' && 'MESSAGING FRAMEWORK'}
             {expandedAsset === 'battlecard' && 'SALES BATTLECARD'}
             {expandedAsset === 'webpage' && 'PRODUCT WEBPAGE'}
           </div>
           <div>
-            <h2 style={{ marginBottom: '28px' }}>
+            <h2 style={{ marginBottom: '28px', fontSize: 'clamp(24px, 7vw, 36px)' }}>
               {expandedAsset === 'messaging' && 'Your positioning & messaging'}
               {expandedAsset === 'battlecard' && 'Discovery & objection guide'}
               {expandedAsset === 'webpage' && 'Customer-facing copy'}
@@ -366,8 +392,9 @@ export default function SystemPage() {
 
   // Results step - grid view
   if (step === 'results' && results) {
+    const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
     return (
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 40px' }}>
+      <div style={containerStyle}>
         <button
           onClick={() => {
             setStep('input');
@@ -376,19 +403,19 @@ export default function SystemPage() {
             setPlan('');
             setResults(null);
           }}
-          style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: '15px', fontWeight: '600', cursor: 'pointer', marginBottom: '40px' }}
+          style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: 'clamp(13px, 4vw, 15px)', fontWeight: '600', cursor: 'pointer', marginBottom: 'clamp(24px, 5vw, 40px)' }}
         >
           ← Start over
         </button>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px', marginBottom: '60px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? '1fr' : '220px 1fr', gap: 'clamp(24px, 5vw, 48px)', marginBottom: 'clamp(40px, 10vw, 60px)' }}>
           <div className="label">YOUR ASSETS</div>
-          <h1 style={{ margin: '0' }}>Ready to use</h1>
+          <h1 style={{ margin: '0', fontSize: 'clamp(28px, 8vw, 42px)' }}>Ready to use</h1>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? '1fr' : '220px 1fr', gap: 'clamp(24px, 5vw, 48px)' }}>
           <div></div>
-          <div style={{ maxWidth: '800px' }}>
+          <div style={{ width: '100%', maxWidth: '800px' }}>
             {[
               { id: 'messaging', label: 'MESSAGING FRAMEWORK', title: 'Your positioning & messaging', content: results.messaging_framework },
               { id: 'battlecard', label: 'SALES BATTLECARD', title: 'Discovery & objection guide', content: results.sales_battlecard },
@@ -398,7 +425,7 @@ export default function SystemPage() {
                 <div style={{ fontSize: '12px', fontWeight: '600', color: '#2563eb', letterSpacing: '0.1em', marginBottom: '8px' }}>
                   {item.label}
                 </div>
-                <h3 style={{ marginBottom: '8px' }}>{item.title}</h3>
+                <h3 style={{ marginBottom: '8px', fontSize: 'clamp(18px, 5vw, 24px)' }}>{item.title}</h3>
                 <div style={{ background: '#eae9e9', border: '1px solid rgba(32, 30, 29, 0.4)', padding: '16px', marginBottom: '16px', maxHeight: '200px', overflow: 'auto', fontSize: '13px', lineHeight: '1.6', color: '#444141' }}>
                   {item.content.substring(0, 400)}...
                 </div>
