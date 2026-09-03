@@ -279,27 +279,15 @@ That's your decision.
 
 ## Automate, Assist, Own
 
-Here's a simple matrix:
-
-| Work | AI Role | Responsibility |
-|------|---------|----------------|
-| Asset creation | Automate | Create first drafts |
-| Content adaptation | Automate | Maintain consistency |
-| Data synthesis | Automate | Organize information |
-| Competitive research | Assist | Surface patterns |
-| Customer research | Assist | Enable analysis |
-| Positioning development | Assist | Provide input |
-| Pricing strategy | Assist | Model scenarios |
-| Positioning decisions | Own | Make the call |
-| Competitive response | Own | Make the call |
-| Pricing decisions | Own | Make the call |
-| GTM prioritization | Own | Make the call |
-
-There's an even shorter version:
+Here's a simple framework:
 
 **Automate production. Accelerate analysis. Own the judgment.**
 
 That's the operating principle.
+
+There's an even shorter version: Automate the work that follows a decision. Use AI to assist the work that informs a decision. Keep humans accountable for making the decision.
+
+That's the difference between using AI to make product marketing better and simply using it to make more marketing.
 
 ## What This Looks Like in a Product Launch
 
@@ -830,14 +818,14 @@ If the answers aren't clear, another round of copy probably won't help.
 Make the decisions first.
 
 Then write the words.`
-  }
+  },
   {
-  id: '6',
-  slug: 'how-to-know-if-your-product-messaging-is-working',
-  title: 'How to Know If Your Product Messaging Is Working',
-  excerpt: 'Product messaging is one of those things companies spend weeks creating and surprisingly little time measuring. The better way to evaluate it is to look for evidence across four things: understand, care, believe, act.',
-  category: 'Messaging',
-  content: `Product messaging is one of those things companies spend weeks creating and surprisingly little time measuring. The messaging framework gets approved. The website gets updated. Sales gets a new deck. Campaigns go live. Then everyone moves on.
+    id: '6',
+    slug: 'how-to-know-if-your-product-messaging-is-working',
+    title: 'How to Know If Your Product Messaging Is Working',
+    excerpt: 'Product messaging is one of those things companies spend weeks creating and surprisingly little time measuring. The better way to evaluate it is to look for evidence across four things: understand, care, believe, act.',
+    category: 'Messaging',
+    content: `Product messaging is one of those things companies spend weeks creating and surprisingly little time measuring. The messaging framework gets approved. The website gets updated. Sales gets a new deck. Campaigns go live. Then everyone moves on.
 
 But how do you know if the messaging is actually working?
 
