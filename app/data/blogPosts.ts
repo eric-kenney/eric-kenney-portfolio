@@ -171,201 +171,149 @@ When producing the deck takes minutes instead of days, the value of the marketer
   {
     id: '2',
     slug: 'ai-what-to-automate-what-not',
-    title: 'AI for Product Marketing: What to Automate, What Not to Automate',
-    excerpt: 'AI can do a surprising amount of product marketing work. The question isn\'t whether it can—it\'s whether it should.',
+    title: 'AI Product Marketing Framework: What to Automate, Assist, and Own',
+    excerpt: 'AI is already changing product marketing. The question isn\'t whether product marketers should use it. It\'s where.',
     category: 'AI',
-    content: `AI can do a surprising amount of product marketing work now.
+    content: `AI is already changing product marketing. The question isn't whether product marketers should use it. It's where.
 
-It can analyze customer interviews, summarize competitors, draft positioning, write a launch page, create a sales battlecard, build an email sequence, and turn all of it into a presentation before you've finished your second cup of coffee.
+Some product marketing work should be almost entirely automated. Some should use AI to accelerate research and analysis. And some should remain firmly owned by the product marketer.
 
-The question isn't whether AI *can* do these things. It's whether it *should*.
+I use a simple **AI product marketing framework** to draw those boundaries:
 
-I've been experimenting with AI across product marketing workflows, including building competitive research agents, ROI calculators, and a system that turns product and market inputs into launch assets. The more I've built, the more I've come back to one rule:
+**Automate.** Production work that follows a strategic decision.
+**Assist.** Work where AI can accelerate research and analysis, but a product marketer still needs to interpret what it means.
+**Own.** Decisions that require strategic judgment, tradeoffs, and accountability.
 
-**Automate the work that follows a decision. Use AI to assist the work that informs a decision. Keep humans accountable for making the decision.**
+The goal isn't to use AI everywhere. It's to use AI where it creates leverage without outsourcing the judgment that makes product marketing valuable.
 
-That's the difference between using AI to make product marketing better and simply using it to make more marketing.
+## What Is an AI Product Marketing Framework?
 
-## What Should Product Marketers Automate With AI?
+An AI product marketing framework defines where AI should play a role across research, positioning, messaging, launches, sales enablement, competitive intelligence, and optimization.
 
-The best candidates for automation are tasks where the important strategic decisions have already been made.
+For every workflow, the framework asks a simple question: Should AI produce the work, help inform the decision, or make the decision?
 
-Think about a sales battlecard. If you've already decided who the buyer is, which problem matters, how you're positioned, what differentiates you, and how you want to compete, creating the battlecard is mostly translation. The same is true for a product webpage. Or a launch deck. Or an email sequence.
+AI can create enormous leverage in the first two. The third is where product marketers need to be careful.
 
-You're taking decisions that already exist and expressing them in another format. That's production work. And AI is very good at it.
+Here's how I think about some common PMM work:
 
-### Asset creation
+| Product Marketing Work | AI Role | PMM Role |
+|---|---|---|
+| Customer research synthesis | Assist | Interpret |
+| Competitive intelligence | Assist | Determine implications |
+| Win/loss analysis | Assist | Diagnose |
+| Sales conversation analysis | Assist | Interpret |
+| Positioning | Own | Decide |
+| Messaging strategy | Own | Decide |
+| Pricing and packaging | Assist | Decide |
+| Launch strategy | Own | Decide |
+| Asset creation | Automate | Review |
+| Sales enablement production | Automate | Review |
+| Content adaptation | Automate | Review |
+| Post-launch analysis | Assist | Decide what changes |
 
-A product marketer shouldn't have to start from a blank page every time the organization needs another asset.
+The boundaries aren't absolute. But the principle is useful.
 
-Once positioning and messaging are approved, AI can create first drafts of:
-- Sales battlecards
-- Product webpages
-- Launch decks
-- Sales enablement materials
-- Email sequences
-- FAQs
-- Persona-specific messaging
-- Competitive talk tracks
-- Internal launch communications
+## Automate: Work That Follows the Decision
 
-The important phrase is *first drafts*. AI doesn't eliminate review. It eliminates much of the mechanical work between an approved strategy and something another team can actually use. That distinction matters.
+This is where AI can remove a lot of production work from a product marketer's plate.
 
-### Content adaptation
+Once positioning and messaging are approved, AI can turn that strategy into first drafts of webpages, sales decks, battlecards, FAQs, campaign briefs, enablement materials, emails, and other launch assets.
 
-This may be an even better use of AI than creating the original asset.
+It can also adapt approved messaging for different audiences, formats, and channels. A core value proposition can become a sales talk track, an executive message, a campaign concept, or webpage copy without starting from scratch each time.
 
-Imagine you've created messaging for an enterprise buyer. Sales needs a version for mid-market. The industry team needs one for healthcare. A partner needs a version for its channel. Customer marketing needs to adapt it for existing customers.
+The important phrase is **once the decision has been made**. AI is strongest when the strategic context already exists and the task is to transform, adapt, summarize, or produce something from it. That's production work. Automate as much of it as you responsibly can.
 
-Historically, someone rewrites all of those. AI can handle much of that adaptation while keeping the core positioning intact.
+## Assist: Work That Informs the Decision
 
-That doesn't just save time. It can improve consistency. One of the perennial problems in product marketing is message drift. The messaging framework says one thing. The website says something slightly different. Sales has its own version. Demand generation emphasizes something else.
+This may be where AI creates the most interesting leverage for product marketers.
 
-The more times humans manually translate the strategy, the more opportunities there are for it to change.
+PMMs consume enormous amounts of information: customer interviews, sales conversations, CRM data, win/loss research, support tickets, product feedback, analyst research, competitor websites, usage data, and market research.
 
-AI gives us a way to propagate an approved strategy instead of repeatedly recreating it.
+Historically, the limitation has often been our ability to process all of it.
 
-### Routine synthesis
+AI can analyze large volumes of customer conversations for recurring problems. It can identify patterns across lost deals, monitor competitors for meaningful changes, cluster customer feedback, surface recurring objections, and compare themes across segments.
 
-Product marketers consume an absurd amount of information. Customer interviews. Analyst reports. Sales calls. Win/loss interviews. Product documents. Slack conversations. Competitive announcements. Sales feedback. Usage data.
+Instead of manually reviewing 20 sales calls, conversation intelligence can help analyze thousands. Instead of periodically checking a competitor's website, AI can continuously identify changes that might matter.
 
-AI is extremely useful for the first pass through that information. It can summarize interviews, extract objections from sales calls, identify themes in win/loss notes, or tell you what changed across a competitor's announcements.
+But finding a pattern isn't the same as deciding what the pattern means.
 
-Having a product marketer spend hours manually organizing that information is increasingly difficult to justify.
+Suppose AI finds that implementation complexity appears frequently in lost enterprise deals. That's useful evidence. A product marketer still has to determine whether the underlying issue is the product, positioning, sales process, competitive environment, target segment, or something else.
 
-But this is also where we begin crossing the line from *automate* into *assist*. Because summarizing the evidence isn't the same as deciding what the evidence means.
+Use AI to make the evidence easier to see and the patterns easier to find. Keep the interpretation human.
 
-## Where Should AI Assist Product Marketers?
+## Own: Work That Requires Judgment
 
-There is a large category of PMM work where I want AI heavily involved but don't want it making the final call.
+AI can generate a positioning statement in seconds. That doesn't mean AI should decide your positioning.
 
-Competitive intelligence is a good example. I built an AI competitive research agent because the traditional process is terrible. Someone periodically visits competitor websites, reads release notes, searches for announcements, checks pricing pages, and tries to determine what changed.
+Positioning requires choosing which customer matters most, which problem you want to own, what you're competing against, where your differentiation is credible, and what you're deliberately going to leave out. Those are business decisions.
 
-AI can do a lot of that work. It can monitor sources, gather information, categorize changes, compare claims, summarize reviews, and surface patterns.
+The same applies to messaging strategy, segmentation, launch strategy, major pricing and packaging choices, and the fundamental decisions behind a go-to-market motion.
 
-What I don't want it doing is deciding:
+AI can absolutely participate in that work. Ask it to challenge an assumption. Have it develop alternative hypotheses. Use it to find contradictory evidence. Ask it to pressure-test your reasoning.
 
-**This changes how we should position our product.**
+But there's a difference between using AI **inside the decision process** and letting AI **own the decision**.
 
-That's a product marketing decision. The AI has given me more information, faster. Now I need to determine whether the competitor's announcement actually matters, whether customers care, whether it changes the sales conversation, and whether we should respond at all.
+A product marketer needs to weigh conflicting evidence, understand the business context, make the tradeoff, and be accountable for what happens next. That's judgment work.
 
-That's the pattern I expect across a lot of product marketing.
+## What This Looks Like Across a Product Launch
 
-### Customer research
+The role of AI should change as work moves from insight to strategy to execution.
 
-AI can transcribe interviews, summarize them, identify themes, cluster feedback, and find quotes related to specific problems.
+During **customer and market research**, AI assists. It synthesizes information, analyzes conversations, and helps identify patterns.
 
-Great.
+During **positioning, messaging, and GTM strategy**, the PMM owns the decisions. AI can surface evidence and challenge assumptions, but the marketer decides what the company will do.
 
-But suppose eight customers mention Feature A and three mention Problem B. Which matters more? Maybe Feature A is an annoyance while Problem B is the reason customers are willing to pay $100,000. Frequency isn't strategy.
+During **launch production**, AI can automate much more. Once the strategy is approved, it can help generate messaging frameworks, webpages, battlecards, sales enablement, campaign briefs, and other assets from the same strategic source of truth.
 
-AI gives you information. You determine what it means.
+After launch, AI moves back into an **assist** role. It can analyze sales conversations, customer feedback, adoption, competitive activity, and performance data to identify what's happening. Then the product marketer decides what needs to change.
 
-### Positioning recommendations
+The AI-native product marketing workflow becomes:
 
-AI can analyze market dynamics, competitive positioning, customer data, and internal capabilities. It can surface options and tradeoffs.
+**AI assists → PMM decides → AI produces → PMM approves → AI analyzes → PMM decides again.**
 
-But it shouldn't decide whether you compete on breadth or depth, whether you lead with innovation or reliability, whether your ICP is growing companies or mature enterprises, or whether you reposition for an emerging market at the risk of confusing your current buyer base.
+## AI Needs a Source of Truth
 
-Those are business decisions, not AI recommendations.
+There's one requirement underneath this entire AI product marketing framework: the system needs to know what it's allowed to believe.
 
-### Pricing input
+Ask AI to create a battlecard without approved positioning and it may create its own differentiation. Ask it to write a webpage without clear product evidence and it may turn an implication into a claim. Ask it to create messaging without a defined buyer and it may quietly choose one for you.
 
-Similar dynamic. AI can analyze competitor pricing, customer surveys, willingness-to-pay studies, cost structures, and revenue models. It can show you scenarios. What if you raised prices 10 percent? What if you changed your packaging? What if you bundled?
+The output can look excellent while containing strategic decisions nobody actually made.
 
-What it can't tell you is which approach reflects your positioning, whether it drives profit or just revenue, or how it changes the sales conversation.
+That's why AI-native product marketing requires a strong source of truth. Approved positioning should be clear. Messaging should be structured. Product capabilities and claims should be grounded in evidence. Customer insights should be distinguishable from assumptions.
 
-That's your decision.
+The stronger that strategic context becomes, the more production work AI can safely handle.
 
-## Automate, Assist, Own
+**The first job of an AI product marketing system isn't generating content. It's knowing what it's allowed to believe.**
 
-Here's a simple framework:
+## "Human in the Loop" Isn't Specific Enough
 
-**Automate production. Accelerate analysis. Own the judgment.**
+Most discussions about using AI in product marketing eventually say there should be a human in the loop. That's true, but it doesn't tell us much.
 
-That's the operating principle.
+Where is the human? If AI researches the market, decides the positioning, writes the messaging, generates the assets, and then asks a PMM to approve the final webpage, there's technically a human in the loop. But the most important decisions have already been made.
 
-There's an even shorter version: Automate the work that follows a decision. Use AI to assist the work that informs a decision. Keep humans accountable for making the decision.
+The better question is **where human judgment belongs in the workflow**.
 
-That's the difference between using AI to make product marketing better and simply using it to make more marketing.
+For product marketing, I'd put it around interpretation, decisions, and approval. AI can help find the signal and produce from the decision. The PMM owns what the signal means, what the business should do about it, and whether the resulting work is ready for the market.
 
-## What This Looks Like in a Product Launch
+That's a much more useful boundary than simply requiring human review at the end.
 
-A product launch is a useful example because it contains almost every kind of product marketing work.
+## AI Should Give PMMs More Time to Be PMMs
 
-The traditional workflow looks something like this: Product requirements come in. The PMM researches the market, talks to customers, develops positioning, writes the messaging framework, creates the launch plan, builds the sales deck, writes the battlecard, drafts webpage copy, prepares enablement, and starts adapting everything for different audiences.
+The promise of AI for product marketing isn't that we can create ten times as many assets. Nobody needs ten times as many battlecards.
 
-Strategy and production are intertwined. That creates a bottleneck. It also creates inconsistency because every asset becomes its own mini-project.
+The opportunity is to spend less time manually processing information and producing repetitive deliverables, and more time understanding customers, shaping strategy, working with Product and Sales, making better decisions, and measuring whether those decisions worked.
 
-I've been experimenting with a different model. Start with the strategic inputs: the product, buyer, problem, market, alternatives, differentiation, proof, positioning, and go-to-market decisions. Get those right. Then make them the source of truth for the system.
+That's what **Automate, Assist, Own** is ultimately designed to do.
 
-The system can use those decisions to produce a messaging framework. That framework can inform a sales battlecard. The same strategy can produce product webpage copy. Additional assets can be created from the same source rather than starting over every time.
+For every product marketing workflow, ask three questions:
 
-If the positioning changes, you don't manually hunt through fifteen documents looking for everything that needs to be rewritten. The change propagates downstream.
+- Can AI automate this because the strategic decision has already been made?
+- Can AI assist by finding patterns, synthesizing information, or accelerating analysis?
+- Does this require a decision that a product marketer should own?
 
-That's the part of AI in product marketing that interests me most. Not:
+Use AI aggressively in the first two categories. Protect the third.
 
-**Can AI write a battlecard?**
-
-Of course it can.
-
-The better question is:
-
-**Can we redesign the workflow so product marketers make the important decisions once and stop manually recreating those decisions in every artifact?**
-
-That's a much bigger opportunity.
-
-## Don't Automate Before You Have a Strategy
-
-There's an obvious problem with everything I just described. The system is only as good as its source of truth.
-
-This is where I think a lot of AI implementations in marketing are going wrong. We start with the output. Someone asks AI to write a webpage. The AI needs context, so we give it a product description and maybe a persona. It fills in the rest.
-
-It invents a value proposition. It decides which benefits matter. It implicitly chooses positioning. It creates differentiation based on whatever information happens to be available.
-
-The output may sound polished. That doesn't make it good product marketing.
-
-You can't automate the propagation of strategy until you actually have a strategy.
-
-That's why I think the most important AI work in product marketing is happening upstream of the prompt. What information does the system need? Which decisions have already been made? Which facts are approved? What is the source of truth? Where is AI allowed to infer? Where does it need human approval? Where should it stop entirely?
-
-Those aren't prompt-engineering questions. They're product marketing operating-model questions.
-
-## What Should PMMs Do With the Time AI Gives Back?
-
-This may ultimately be the most important question.
-
-Suppose AI eliminates 30 percent of the production work on a product marketing team. What happens next? The obvious corporate answer is that the team can produce 30 percent more.
-
-I think that's the wrong goal.
-
-Most PMM organizations I've seen don't suffer from a shortage of assets. They suffer from a shortage of time. There's never enough time to talk to customers. Win/loss gets pushed until next quarter. Competitive intelligence becomes reactive. Segmentation hasn't been revisited in two years. Nobody has enough time to investigate why a product with strong features isn't converting. The positioning gets revisited during a launch when it should have been challenged six months earlier.
-
-Product marketers spend their weeks servicing the go-to-market machine instead of understanding the market. That's the opportunity AI creates. Not more stuff.
-
-**More product marketing.**
-
-If AI gives a PMM five or ten hours back every week, I'd rather see those hours spent talking to customers, studying the market, working with Product, analyzing deals, challenging assumptions, and making better decisions.
-
-Because that's the work that eventually determines whether all those AI-generated assets are any good.
-
-## The Goal Isn't to Automate Product Marketing
-
-I don't think the end state is an autonomous product marketing function where AI conducts the research, chooses the market, writes the positioning, sets the price, creates the launch, and tells sales what to say.
-
-Maybe the technology eventually becomes capable of doing much more of that. Capability isn't the only question.
-
-Product marketing exists partly because companies need someone accountable for making difficult market decisions with incomplete information.
-
-AI changes how that person works. It can give them more evidence. It can challenge assumptions. It can surface patterns they missed. It can eliminate hours of repetitive production. And once a strategic decision has been made, it can carry that decision across the go-to-market organization at a speed that wasn't previously possible.
-
-That's a much more interesting future than simply replacing the marketer.
-
-The goal isn't to automate product marketing. It's to automate enough of the work around product marketing that product marketers can spend more time actually doing it.
-
-The rule I'd use is simple:
-
-**Automate production. Accelerate analysis. Own the judgment.**`
+As AI makes production cheaper and analysis faster, the quality of the decisions behind that work becomes more important, not less.`
   },
   {
     id: '3',
